@@ -1,0 +1,243 @@
+<div #topabout id="topabout">
+    <app-navbar></app-navbar>
+</div>
+
+
+
+
+
+
+<div class="lg:h-24 bg-white md:h-20 h-16"></div>
+
+<div class="hidden md:block" style="background-color: #F8F8F8;">
+    <div class="h-16"></div>
+    <div class="z-0 absolute top-[23vw]">
+        <img class="w-[40vw]" src="../../../assets/images/about-background.svg" alt="">
+    </div>
+    <div class=" z-10 w-full flex justify-between items-center">
+        <div class="flex flex-col justify-center items-center"
+            [ngClass]="{ 'ml-[10vw]' : languageService.selectedLanguage == 'en' , 'mr-[10vw]' : languageService.selectedLanguage != 'en'  }">
+            <div class="lg:text-[4vw] md:text-[3.5vw] text-green-dark font-extrabold">{{"about2" |
+                translate}}
+                <span class="text-primary-500">{{"us" | translate}}</span>
+            </div>
+            <div class="h-2"></div>
+            <!-- <div class="text-green-dark text-sm font-medium">{{"whatwedo" | translate}}</div> -->
+        </div>
+
+        <div class="w-[53vw] "
+            [ngClass]="{ 'pl-10' : languageService.selectedLanguage == 'en' , 'pr-10' : languageService.selectedLanguage != 'en'  }">
+            <img [ngClass]="{ 'image-shadow' : languageService.selectedLanguage == 'en' , 'rtl-image-shadow' : languageService.selectedLanguage != 'en'  }"
+                src="../../../assets/images/about-two.jpg">
+        </div>
+
+        <div class="flex flex-col "
+            [ngClass]="{ 'mr-10' : languageService.selectedLanguage == 'en' , 'ml-10' : languageService.selectedLanguage != 'en'  }">
+            <div class="relative w-[3vw] mb-2">
+                <a href="https://www.facebook.com/profile.php?id=100087801987814&mibextid=LQQJ4d" target="_blank"> <img
+                        class="z-0 w-full absolute " src="../../../assets/icons/circle-facebook.svg"></a>
+                <a href="https://www.facebook.com/profile.php?id=100087801987814&mibextid=LQQJ4d" target="_blank"> <img
+                        style="background-color: #F8F8F8 ;" class="z-10 w-full relative cursor-pointer hover:opacity-0"
+                        src="../../../assets/icons/circle-facebook-gray.svg"></a>
+            </div>
+            <div class="relative w-[3vw] mb-2">
+                <a href="https://instagram.com/blackstallion_fx?igshid=YmMyMTA2M2Y=" target="_blank"><img
+                        class="z-0 w-full absolute  cursor-pointer "
+                        src="../../../assets/icons/circle-instagram.svg"></a>
+                <a href="https://instagram.com/blackstallion_fx?igshid=YmMyMTA2M2Y=" target="_blank"><img
+                        style="background-color: #F8F8F8 ;" class="z-10 w-full relative  cursor-pointer hover:opacity-0"
+                        src="../../../assets/icons/circle-instagram-gray.svg"></a>
+            </div>
+
+            <div class="relative w-[3vw] mb-2">
+                <a href="https://t.me/+M6lCOFhHEI01MzEy" target="_blank"><img class="z-0 w-full absolute "
+                        src="../../../assets/icons/telegram-green.svg"></a>
+                <a href="https://t.me/+M6lCOFhHEI01MzEy" target="_blank"><img style="background-color: #F8F8F8 ;"
+                        class="z-10 w-full relative cursor-pointer hover:opacity-0"
+                        src="../../../assets/icons/telegram.svg"></a>
+            </div>
+            <div class="relative w-[3vw] mb-2">
+                <a href="https://twitter.com/BlackXStallionf" target="_blank"><img class="z-0 w-full absolute "
+                        src="../../../assets/icons/circle-twiter.svg"></a>
+                <a href="https://twitter.com/BlackXStallionf" target="_blank"> <img style="background-color: #F8F8F8 ;"
+                        class="z-10 w-full relative cursor-pointer hover:opacity-0"
+                        src="../../../assets/icons/circle-twiter-gray.svg"></a>
+            </div>
+            <div class="relative w-[3vw] mb-2">
+                <a href="https://www.linkedin.com/company/88695037/admin/" target="_blank"><img
+                        class="z-0 w-full absolute " src="../../../assets/icons/linkedin.svg"></a>
+                <a href="https://www.linkedin.com/company/88695037/admin/" target="_blank"><img
+                        style="background-color: #F8F8F8 ;" class="z-10 w-full relative cursor-pointer hover:opacity-0"
+                        src="../../../assets/icons/linkedin-gray.svg"></a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="h-36"></div>
+
+    <div class="w-full lg:px-24 md:p-16 flex items-start justify-center">
+        <img [ngClass]="{ 'image-one-shadow' : languageService.selectedLanguage == 'en' , 'rtl-image-one-shadow' : languageService.selectedLanguage != 'en'  }"
+            class="w-5/12" src="../../../assets/images/about-one.png">
+
+            
+        <div class="w-[3vw]"></div>
+        <div class="w-6/12 text-[1.1vw] text-gray-700 leading-[2.5vw]">
+            {{"abouttext" | translate}}
+
+        </div>
+    </div>
+
+    <div class="h-20"></div>
+
+    <!-- <div class="text-green-dark text-[2vw] font-medium lg:mx-28 md:mx-16">{{"seewhatourcustomersayaboutus" | translate}}
+    </div> -->
+
+    <div class="h-10"></div>
+
+    <!-- <div>
+        <swiper dir="rtl" [spaceBetween]="30" [slidesPerView]="'auto'" [loop]="true" [loopFillGroupWithBlank]="true"
+            [centeredSlides]="true" [pagination]="false" [navigation]="false" class="w-full pb-16">
+            <ng-template class="w-3/12" *ngFor="let item of items; index as i;" swiperSlide>
+
+                <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
+                    class="rounded-md bg-white shadow-md px-6">
+                    <div class="h-1"></div>
+                    <div id="card-content">
+                        <div class="w-7 mt-1 mb-4 opacity-60">
+                            <img src="../../../assets/icons/testimonials.svg">
+                        </div>
+
+                        <div class="text-green-dark font-medium text-[1.1vw]">{{"greateexperience" | translate}}</div>
+                        <div class="h-2"></div>
+                        <div class=" text-[0.9vw] text-gray-400">David GK</div>
+                        <div class="h-1"></div>
+                        <div id="text-testimonials" class="text-gray-600 text-[0.9vw] tracking-wider leading-6">
+                            {{"longtext2" | translate}}
+                        </div>
+                        <div class="h-2"></div>
+                        <div class="w-full flex">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/half-fill-star.svg">
+
+                        </div>
+                        <div class="h-5"></div>
+                    </div>
+
+                </div>
+
+            </ng-template>
+        </swiper>
+    </div> -->
+
+    <div class="h-20"></div>
+
+</div>
+
+
+
+
+
+
+
+<div class="block md:hidden" style="background-color: #F8F8F8;">
+
+    <div class="h-12"></div>
+
+    <div class="z-0 absolute top-[110px] flex justify-center w-full">
+        <img class="w-[80vw]" src="../../../assets/images/about-background.svg" alt="">
+    </div>
+
+    <!-- [ngClass]="{ 'ml-[10vw]' : languageService.selectedLanguage == 'en' , 'mr-[10vw]' : languageService.selectedLanguage != 'en'  }" -->
+
+    <div class="flex flex-col justify-center items-center">
+        <div class="lg:text-[4vw] md:text-[3.5vw] text-[8vw] text-green-dark font-extrabold">{{"about2" |
+            translate}}
+            <span class="text-primary-500">{{"us" | translate}}</span>
+        </div>
+        <div class="h-2"></div>
+        <!-- <div class="text-green-dark md:text-sm text-[4vw] font-medium">{{"whatwedo" | translate}}</div> -->
+    </div>
+
+
+    <div class="h-[70px]"></div>
+
+    <div class="w-[95vw] ">
+        <img [ngClass]="{ 'image-shadow-sm ml-2' : languageService.selectedLanguage == 'en' , 'rtl-image-shadow-sm mr-2' : languageService.selectedLanguage != 'en'  }"
+            class="w-[90vw]" src="../../../assets/images/about-two.jpg">
+    </div>
+
+
+    <div class="h-[40px]"></div>
+
+    <div class="w-full flex justify-center">
+
+        <div class="w-[95vw] text-[3vw] mx-3 text-gray-700 leading-[20px] text-center">
+            {{"abouttext" | translate}}
+
+        </div>
+    </div>
+
+    <div class="h-20"></div>
+
+    <div class="text-green-dark text-[3.4vw] font-semibold mx-4">{{"seewhatourcustomersayaboutus" | translate}}
+    </div>
+
+    <div class="h-10"></div>
+
+    <div>
+        <swiper dir="rtl" [spaceBetween]="5" [slidesPerView]="'auto'" [loop]="true" [loopFillGroupWithBlank]="true"
+            [centeredSlides]="true"  [autoplay]="{delay: 3000,  disableOnInteraction: false}" [speed]="1000"  [pagination]="false" [navigation]="false" class="w-full pb-16">
+            <ng-template class="w-10/12" *ngFor="let item of items; index as i;" swiperSlide>
+
+                <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
+                    class="rounded-md bg-white shadow-md px-6 mx-3">
+                    <div class="h-1"></div>
+                    <div id="card-content">
+                        <div class="w-7 mt-1 mb-4 opacity-60">
+                            <img src="../../../assets/icons/testimonials.svg">
+                        </div>
+
+                        <div class="text-green-dark font-medium text-[3vw]">{{"greateexperience" | translate}}</div>
+                        <div class="h-2"></div>
+                        <div class=" text-[2.6vw] text-gray-400">David GK</div>
+                        <div class="h-1"></div>
+                        <div id="text-testimonials" class="text-gray-600 text-[2.7vw] tracking-wider leading-6">
+                            {{"longtext2" | translate}}
+                        </div>
+                        <div class="h-2"></div>
+                        <div class="w-full flex">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/fill-star.svg">
+                            <img src="../../../assets/icons/half-fill-star.svg">
+
+                        </div>
+                        <div class="h-5"></div>
+                    </div>
+
+                </div>
+
+            </ng-template>
+        </swiper>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div>
+    <app-footer> </app-footer>
+</div>

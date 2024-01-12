@@ -1,0 +1,37 @@
+.menu-text{
+    font-size: 1.2vw;
+}
+
+.sub-menu-text{
+    font-size: 0.9vw;
+}
+
+@media only screen and (max-width: 1023px ) {
+    .logo{
+        width: 11%;
+    }
+}
+
+@media only screen and (max-width: 1000px ) {
+    .logo{
+        width: 12%;
+    }
+}
+
+@media only screen and (max-width: 950px ) {
+    .logo{
+        width: 13%;
+    }
+}
+
+@media only screen and (max-width: 850px ) {
+    .logo{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 750px ) {
+    .logo{
+        width: 13%;
+    }
+}

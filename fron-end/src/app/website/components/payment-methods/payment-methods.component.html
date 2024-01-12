@@ -1,0 +1,198 @@
+<div class="w-full" style="background-color: #F2F2F2;">
+    <div class="h-16"></div>
+    <div class="w-full flex justify-center items-center">
+        <div class="tracking-wide text-primary-500 font-semibold lg:text-[2vw] md:text-[2.8vw] text-[5vw]">
+            {{"supportedpaymentmethods" | translate}}
+        </div>
+    </div>
+    <div class="h-8"></div>
+
+
+    <div class="lg:w-7/12 md:w-10/12 md:block hidden mx-auto">
+
+        <div class="w-full h-44 grid grid-cols-4 items-center justify-center justify-items-center">
+
+            <div class=" w-full relative grid grid-cols-1 justify-items-center ">
+                <img class="absolute z-0 w-9/12" src="../../../assets/icons/fastpay-colorfull.svg">
+                <img class="relative z-10 w-9/12 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/fastpay.svg">
+            </div>
+
+            <div class="w-full relative grid grid-cols-1 justify-items-center ">
+                <img class="absolute w-10/12 z-0" src="../../../assets/icons/moneygram-colorfull.svg">
+                <img class="relative w-10/12 z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/moneygram.svg">
+            </div>
+
+            <div class=" w-full relative grid grid-cols-1 justify-items-center ">
+                <img class="absolute z-0 w-5/12" src="../../../assets/icons/visa-colorfull.svg">
+                <img class="relative z-10 w-5/12 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/visa.svg">
+            </div>
+
+            <div class="w-full relative grid grid-cols-1 justify-items-center ">
+                <img class="absolute z-0 w-7/12" src="../../../assets/images/asiapay-colorfull.png">
+                <img class="relative z-10 w-7/12 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/images/asiapay.png">
+            </div>
+            <div class="w-full relative grid grid-cols-1 justify-items-center">
+                <img class="absolute z-0 w-9/12" src="../../../assets/icons/zaincash-colorfull.svg">
+                <img class="relative z-10 w-9/12 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/zaincash.svg">
+            </div>
+
+            <div class="w-full relative grid grid-cols-1 justify-items-center ">
+                <img class="absolute z-0  lg:w-[13vw] md:w-[16vw] "
+                    src="../../../../assets/images/byblos-colorfull.png">
+                <img class="  relative z-10 lg:w-[13vw] md:w-[16vw] hover:opacity-0 cursor-pointer"
+                    style="background-color: #F2F2F2;" src="../../../../assets/images/byblos-gray.png">
+            </div>
+            <div class="w-full relative grid grid-cols-1 justify-items-center">
+                <img class="absolute z-0 w-5/12" src="../../../assets/icons/mastercard-colorfull.svg">
+                <img class="relative z-10 w-5/12 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/mastercard.svg">
+            </div>
+
+            <div class="w-full relative grid grid-cols-1 justify-items-center">
+                <img class="absolute w-9/12 z-0" src="../../../assets/icons/usdt-colorfull.svg">
+                <img class="relative w-9/12 z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                    src="../../../assets/icons/usdt.svg">
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <swiper dir="rtl" id="latest-news" [spaceBetween]="0" [slidesPerView]="1" [loop]="true"
+        [loopFillGroupWithBlank]="true" [pagination]="false" [autoplay]="{delay: 2700, disableOnInteraction: false}"
+        [navigation]="false" class="w-10/12 pb-16 block md:hidden">
+        <ng-template swiperSlide>
+            <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
+                class=" flex items-center justify-between h-24">
+                <div class="relative w-[17vw] mx-1">
+                    <img class="w-full absolute z-0" src="../../../assets/icons/fastpay-colorfull.svg">
+                    <img class="w-full relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/icons/fastpay.svg">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[19vw] mx-1">
+                    <img class="absolute w-full z-0" src="../../../assets/icons/moneygram-colorfull.svg">
+                    <img class="relative w-full z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/icons/moneygram.svg">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[11vw] mx-1">
+                    <img class=" w-full absolute z-0" src="../../../assets/icons/visa-colorfull.svg">
+                    <img class=" w-full relative z-10 h-full hover:opacity-0 cursor-pointer"
+                        style="background-color: #F2F2F2;" src="../../../assets/icons/visa.svg">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[15vw] mx-1">
+                    <img class="w-full absolute z-0" src="../../../assets/images/asiapay-colorfull.png">
+                    <img class=" w-full relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/images/asiapay.png">
+                </div>
+
+            </div>
+
+        </ng-template>
+
+
+        <ng-template swiperSlide>
+            <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
+                class=" flex items-center justify-between h-24">
+                <div class="relative w-[15vw]  mx-2">
+                    <img class="absolute w-full  z-0" src="../../../assets/icons/zaincash-colorfull.svg">
+                    <img class="relative w-full  z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/icons/zaincash.svg">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[20vw] mx-1">
+                    <img class="w-full absolute z-0  " src="../../../../assets/images/byblos-colorfull.png">
+                    <img class="w-full relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../../assets/images/byblos-gray.png">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[11vw] mx-1">
+                    <img class="absolute w-full z-0" src="../../../assets/icons/mastercard-colorfull.svg">
+                    <img class="relative w-full z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/icons/mastercard.svg">
+                </div>
+                <div class="w-2"></div>
+                <div class="relative w-[18vw] mx-1">
+                    <img class="absolute w-full  z-0" src="../../../assets/icons/usdt-colorfull.svg">
+                    <img class="relative w-full z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+                        src="../../../assets/icons/usdt.svg">
+                </div>
+            </div>
+
+        </ng-template>
+
+
+    </swiper>
+
+
+
+    <div class="md:h-20"></div>
+</div>
+
+
+
+
+
+<!-- <div class=" flex items-center justify-between h-24">
+    <div class="w-3/12">
+        <img class="absolute z-0  " src="../../../assets/icons/asiahawala-colorfull.svg">
+        <img class="  relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/asiahawala.svg">
+    </div>
+    <div class="w-3/12  ">
+        <img class="absolute z-0" src="../../../assets/icons/fastpay-colorfull.svg">
+        <img class="relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/fastpay.svg">
+    </div>
+
+    <div class="w-3/12 "
+        [ngClass]="{ 'transform translate-x-16' : languageService.selectedLanguage == 'en' , 'transform -translate-x-16' : languageService.selectedLanguage != 'en'  }">
+        <img class="absolute z-0" src="../../../assets/icons/visa-colorfull.svg">
+        <img class="relative z-10 h-full hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/visa.svg">
+    </div>
+
+    <div class="w-2/12"
+        [ngClass]="{ 'mr-4' : languageService.selectedLanguage == 'en' , '-mr-4' : languageService.selectedLanguage != 'en'  }">
+        <img class="absolute z-0" src="../../../assets/icons/cash-colorfull.svg">
+        <img class="relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/cash.svg">
+    </div>
+</div>
+
+<div class=" flex items-center justify-between h-24">
+    <div class="w-3/12">
+        <img class="absolute z-0" src="../../../assets/icons/zaincash-colorfull.svg">
+        <img class="relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/zaincash.svg">
+    </div>
+    <div class="w-4/12">
+        <img class="absolute z-0" src="../../../assets/icons/moneygram-colorfull.svg">
+        <img class="relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/moneygram.svg">
+    </div>
+    <div class="w-2/12">
+        <img class="absolute z-0" src="../../../assets/icons/mastercard-colorfull.svg">
+        <img class="relative z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/mastercard.svg">
+    </div>
+    <div class="">
+        <img class="absolute w-36  z-0" src="../../../assets/icons/usdt-colorfull.svg">
+        <img class="relative w-36 z-10 hover:opacity-0 cursor-pointer" style="background-color: #F2F2F2;"
+            src="../../../assets/icons/usdt.svg">
+    </div>
+</div> -->

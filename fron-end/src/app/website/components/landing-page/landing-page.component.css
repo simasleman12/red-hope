@@ -1,0 +1,64 @@
+.landing-text {
+        width: 35vw;
+        font-size: 3.9vw;
+
+}
+
+
+
+.background-image {
+        width: 100 vw;
+        /* height: 650px; */
+        background-image: url("../../../../assets/images/background-image.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+}
+
+.card-shadow {
+        box-shadow: 0px 7px 10px rgb(182, 181, 181);
+}
+
+
+/* fix the buttons positions */
+
+#landing-page-sm .swiper-button-prev {
+        color: #12CD86;
+        transform: scale(50%);
+}
+
+#landing-page-sm .swiper-button-next {
+
+        color: #12CD86;
+        transform: scale(50%);
+
+}
+
+
+.swiper-button-prev {
+        color: #12CD86;
+        transform: scale(80%);
+
+}
+
+.swiper-button-next {
+
+        color: #12CD86;
+        transform: scale(80%);
+
+}
+
+
+
+@media only screen and (min-width: 1023px) {
+
+        .lg-padding-card {
+                padding: 2%;
+        }
+
+        .height-card-container {
+                width: 30%;
+        }
+
+}

@@ -1,0 +1,19 @@
+.background-image{
+    width: 100 vw;
+    height: 410px;        
+    background-image: url("../../../../assets/images/web-trader-background-image.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+
+}
+
+.rtl-background-image{
+    width: 100 vw;
+    height: 410px;        
+    background-image: url("../../../../assets/images/rtl-web-trader-background-image.png");
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+
+}

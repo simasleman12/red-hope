@@ -1,0 +1,48 @@
+<div [dir]="languageService.selectedLanguage == 'En' ? 'ltr' : 'rtl'"
+    class="w-screen min-h-screen overflow-x-hidden  bg-white flex">
+    <div class="w-2/12 fixed h-screen bg-green-dark pt-5">
+        <div class="h-full flex flex-col justify-between">
+
+            <div class=" flex flex-col justify-between">
+                <img src="/assets/icons/logo-blackstallion.svg" alt="" class="mx-auto ">
+
+                <div>
+                    <div class="pt-10">
+                        <div class="flex bg-green-gray cursor-pointer px-3 py-4 items-center">
+                            <img src="/assets/icons/Vector.svg" alt="" class="px-3">
+                            <p class="text-sm font-medium ">{{"verification" | translate}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="mx-auto h-10 flex">
+                <img src="/assets/icons/logout.svg" alt="" class="pb-6 px-1">
+                <p class="text-sm font-medium content-center text-white-maria-2">{{"logout" | translate}}</p>
+            </div> -->
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="w-2/12 "></div>
+
+    <div class="w-10/12 h-screen bg-white">
+        <div class="px-10 mt-5 w-full text-end">
+            <button routerLink="/" class="px-6 py-2 text-sm rounded border border-gray-300 ">{{"gotowebsite" |
+                translate}}</button>
+        </div>
+
+        <div class="relative">
+            <router-outlet></router-outlet>
+        </div>
+
+    </div>
+</div>

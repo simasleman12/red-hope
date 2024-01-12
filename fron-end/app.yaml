@@ -1,0 +1,25 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+handlers:
+  - url: /
+    static_files: dist/black-stallion/index.html
+    upload: dist/black-stallion/index.html
+  - url: /
+    static_dir: dist/black-stallion
+skip_files:
+  - e2e/
+  - node_modules/
+  - src/
+  - coverage
+  - ^(.*/)?\..*$
+  - ^(.*/)?.*\.md$
+  - ^(.*/)?.*\.yaml$
+  - ^LICENSE
+
+# Set-ExecutionPolicy Unrestricted -Force // to disable scripts execution
+# Set-ExecutionPolicy Unrestricted -Scope Process // to allow scripts execution
+
+# gcloud app deploy
+# gcloud config list
+# gcloud config set project blackstallionwebsitehosting

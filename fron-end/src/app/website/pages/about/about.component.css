@@ -1,0 +1,35 @@
+.image-shadow {
+
+        box-shadow: 10px 10px 0px 0px #12CD86;
+
+}
+
+.rtl-image-shadow {
+
+        box-shadow: -10px 10px 0px 0px #12CD86;
+
+}
+
+.image-shadow-sm {
+
+        box-shadow: 5px 5px 0px 0px #12CD86;
+
+}
+
+.rtl-image-shadow-sm {
+
+        box-shadow: -5px 5px 0px 0px #12CD86;
+
+}
+
+.image-one-shadow {
+
+        box-shadow: -10px 10px 0px 0px #0F3E50;
+
+}
+
+.rtl-image-one-shadow {
+
+        box-shadow: 10px 10px 0px 0px #0F3E50;
+
+}

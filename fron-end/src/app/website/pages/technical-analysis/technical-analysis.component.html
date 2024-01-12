@@ -1,0 +1,54 @@
+<div #toptechnicalanalysis id="toptechnicalanalysis">
+    <app-navbar></app-navbar>
+</div>
+
+<div class="lg:h-24 bg-white md:h-20 h-16"></div>
+
+
+<div class=" hidden w-full h-[50vw] bg-no-repeat bg-right background-image md:flex  "
+    [ngClass]="{ 'justify-end' : languageService.selectedLanguage == 'en' , 'justify-start' : languageService.selectedLanguage != 'en'  }">
+    <div class="flex flex-col items-center lg:px-32 md:px-20">
+        <div class="h-20"></div>
+        <div class=" lg:w-[34vw] md:w-[44vw] text-gray-900 lg:text-[3.5vw] md:text-[3.9vw] text-center font-semibold">
+            {{"joinourtelegramchannel" | translate}}
+        </div>
+
+
+
+        <div class="h-14"></div>
+
+        <a href="https://t.me/blackstallionfx_analysis" target="_blank">
+            <button type="button"
+                class="inline-block lg:w-[25vw] md:w-[30vw] py-2 bg-primary-500 border-2 border-primary-500 text-white font-medium lg:text-[1vw] md:text-[1.7vw] rounded-lg hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
+                {{"koinchannel" | translate}}
+            </button>
+        </a>
+    </div>
+
+</div>
+
+
+
+<div class=" md:hidden h-96   bg-no-repeat bg-right background-image-sm flex  "
+    [ngClass]="{ 'justify-end' : languageService.selectedLanguage == 'en' , 'justify-start' : languageService.selectedLanguage != 'en'  }">
+    <div class="flex flex-col items-center w-full">
+        <div class="h-20"></div>
+        <div class="w-[80vw] text-gray-900 text-[7vw] justify-center  text-center font-semibold">
+            {{"joinourtelegramchannel" | translate}}
+        </div>
+
+
+
+        <div class="h-14"></div>
+
+        <a href="https://t.me/+M6lCOFhHEI01MzEy" target="_blank"><button type="button"
+                class="inline-block w-[70vw] py-2 bg-primary-500 border-2 border-primary-500 text-white font-medium text-[4vw] rounded-lg hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
+                {{"koinchannel" | translate}}
+            </button></a>
+    </div>
+
+</div>
+
+
+
+<app-footer></app-footer>

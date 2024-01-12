@@ -1,0 +1,52 @@
+<div class="bg-light-gray overflow-x-clip"
+    [ngClass]="{  'h-screen relative overflow-clip' : homeService.isModalShow || homeService.isTradingModalShow  }">
+   
+
+    <!-- <div class="h-[15vh] w-[16vw] mb-[3vh] flex   ">
+         <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+        <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+        <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+        <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+        <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+
+        <iframe src="https://www.mql5.com/quotes/widget?type=overview&amp;filter=EURUSD "  height="170" ></iframe>
+     </div>
+    -->
+    <div  >
+        <app-navbar></app-navbar>
+    </div>
+    <div class="lg:h-24 bg-white md:h-20 h-16"></div>
+    <div #top id="top">
+        <app-landing-page></app-landing-page>
+    </div>
+    <div>
+        <app-whychooseus></app-whychooseus>
+    </div>
+
+     
+  
+  
+    <div #services id="services">
+        <app-trading-services></app-trading-services>
+    </div>
+ 
+    <div>
+        <!-- <app-latest-news></app-latest-news> -->
+    </div>
+    <div>
+        <app-web-trader-info></app-web-trader-info>
+    </div>
+    <div>
+        <app-our-market></app-our-market>
+    </div>
+    <!-- <div>
+        <app-testimonials></app-testimonials>
+    </div> -->
+    <div #payment id="payment">
+        <app-payment-methods></app-payment-methods>
+    </div>
+ 
+    <div #contact id="contact">
+        <app-footer> </app-footer>
+    </div>
+ </div>

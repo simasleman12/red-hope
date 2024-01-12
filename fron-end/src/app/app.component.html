@@ -1,0 +1,36 @@
+
+
+
+<div
+    [ngClass]="{'font-droid-arabic-kufi': languageService.selectedLanguage != 'en' , 'font-roboto' : languageService.selectedLanguage == 'en'}">
+    <div [ngClass]="{'h-screen , overflow-hidden': homeService.isModalShow || homeService.isDiclaimerPdfShow }">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+<div *ngIf="homeService.isDiclaimerPdfShow">
+
+    <div class=" overflow-y-scroll bg-opacity-40 py-5 h-screen bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
+        id="modal">
+
+        <div class="w-full fixed flex justify-end z-50  mb-10  px-[8vw] ">
+
+            <div (click)="homeService.onDisclaimerPdfShowModal()"
+                [ngClass]="{ 'right-10' : languageService.selectedLanguage == 'en',  'left-10' : languageService.selectedLanguage != 'en' }"
+                class="bg-white cursor-pointer relative  rounded-full flex justify-center items-center w-10 h-10">
+                <img src="../../../assets/icons/close.svg">
+            </div>
+        </div>
+
+
+
+        <pdf-viewer
+            [src]=" languageService.selectedLanguage == 'en' ? '../assets/pdf/english.pdf'  : languageService.selectedLanguage == 'ar' ? '../assets/pdf/arabic.pdf' :  '../assets/pdf/kr.pdf' "
+            [rotation]="0" [original-size]="false" [show-all]="true" [fit-to-page]="true" [zoom]="1"
+            [zoom-scale]="'page-width'" [stick-to-page]="false" [render-text]="true" [external-link-target]="'blank'"
+            [autoresize]="true" [show-borders]="false"
+            class="md:w-[70vw] mt-[3vh] w-[90vw] h-[1800px] md:h-[4000px] mx-auto "></pdf-viewer>
+    </div>
+
+</div>
