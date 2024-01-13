@@ -7,13 +7,10 @@ import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import { LanguageService } from 'src/app/website/services/language.service';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/website/auth/login.service';
-import { RegistrationService } from 'src/app/website/auth/registration.service';
-import { LoginModel } from 'src/app/website/models/login-model';
-import { RegistratioModel } from 'src/app/website/models/registration-model';
-import { delay } from 'rxjs';
+ import { LoginModel } from 'src/app/website/models/login-model';
+ import { delay } from 'rxjs';
 import { Router } from '@angular/router';
-import { ChangeCurrenciesService } from '../../services/change-currencies.service';
- // install Swiper modules
+  // install Swiper modules
 SwiperCore.use([Autoplay, Pagination, Navigation]);
  
 @Component({
@@ -32,12 +29,14 @@ export class LandingPageComponent implements OnInit {
 
   items = ['EUR', 'GBP', 'CAD', 'CHF','UTF','ABC','WWW'];
   showPassword = false;
+  gender:any='Male';
+  noti:any=[1,1,2,3,4,4]
   showConfiremPassword = false;
   registrationForm!: FormGroup;
   loginForm!: FormGroup;
   RUsernameError = '';
   RPhoneNumberError = '';
-  REmailError = '';
+   REmailError = '';
   RPasswordError = '';
   RPasswordConfiremError = '';
   LEmailError = '';
@@ -50,9 +49,8 @@ export class LandingPageComponent implements OnInit {
     private renderer: Renderer2,
     protected languageService: LanguageService,
     protected loginService: LoginService,
-    private registrationService: RegistrationService,
-    private router: Router,
-     protected changeCurrenciesService: ChangeCurrenciesService) {
+     private router: Router,
+     ) {
       
     // changeCurrenciesService.onGetExchangeCurrencies()
     // setInterval(function () {
@@ -60,8 +58,64 @@ export class LandingPageComponent implements OnInit {
     // }, 1000);
 
   }
+  typeblood:any = [
+    {value:'A+'},
+    {value:'A-'},
+    {value:'B+'},
+    {value:'B-'},
+    {value:'O+'},
+    {value:'O-'},
+    {value:'AB+'},
+    {value:'AB-'},
+  ];
 
 
+
+  female(){
+    this.gender = 'FeMale';
+  }
+
+  male(){
+    this.gender =  'Male';
+  }
+ 
+  smok:any='No';
+  yessmok(){
+    this.smok = 'Yes';
+  }
+
+  Nosmok(){
+    this.smok =  'No';
+  }
+
+Suger:any='No';
+  yesSuger(){
+    this.Suger = 'Yes';
+  }
+
+  NoSuger(){
+    this.Suger =  'No';
+  }
+
+  logins(){
+    this.loginService.login =  !this.loginService.login;
+  }
+  addnews(){
+    this.loginService.news =  !this.loginService.news;
+
+  }
+  signup(){
+    this.loginService.signin =  !this.loginService.signin;
+  }
+  news(){
+    this.loginService.news =  !this.loginService.news;
+  }
+  fol(){
+    this.loginService.folder =  !this.loginService.folder;
+  }
+  notific(){
+    this.loginService.notifi =  !this.loginService.notifi;
+  }
   ngOnInit(): void {
   
 
@@ -85,137 +139,13 @@ export class LandingPageComponent implements OnInit {
 
 
   onSubmitRegistration() {
-    // && this.registrationForm.value.password == this.registrationForm.value.confiremPassword
-    if (this.registrationForm.valid &&
-      this.registrationForm.value.password.length >= 8 && this.registrationForm.value.password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~])[0-9a-zA-Z`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]+$/) &&
-      this.registrationForm.value.password === this.registrationForm.value.confiremPassword
-    ) {
-      var registrationBody = new RegistratioModel(
-        this.registrationForm.value.username,
-        this.registrationForm.value.phoneNumber,
-        this.registrationForm.value.email,
-        this.registrationForm.value.password,
-        this.registrationForm.value.confiremPassword
-      );
-
-      this.registrationService.onRegister(registrationBody).subscribe((response: any) => {
-        this.onResetRegistration();
-        localStorage.setItem('token', response.token)
-        this.loginService.token = response.token;
-        this.homeService.isVerifyEmailModalShow = true;
-        this.homeService.isModalShow = false;
-        this.RUsernameError = '';
-        this.RPhoneNumberError = '';
-        this.REmailError = '';
-        this.RPasswordError = '';
-        this.RPasswordConfiremError = '';
-         
-console.log(response);
-
-      }, (error: any) => {
-        // console.log(error);
-        // console.log(error.error.errors.fullname);
-        if (error.error.errors.fullname != undefined) {
-          this.RUsernameError = error.error.errors.fullname[0];
-        } else if (error.error.errors.phone != undefined) {
-          this.RPhoneNumberError = error.error.errors.phone[0];
-        }
-        if (error.error.errors.email != undefined) {
-          this.REmailError = error.error.errors.email[0];
-        } if (error.error.errors.password != undefined) {
-          if (error.error.errors.password == 'The password confirmation does not match.') {
-            // this.RPasswordError = error.error.errors.password[0];
-            this.RPasswordConfiremError = 'وشەنهێنیەکان هاوشێوەنین.';
-          } else if (error.error.errors.password == 'The given password has appeared in a data leak. Please choose a different password.') {
-            // this.RPasswordError = error.error.errors.password[0];
-            this.RPasswordError = 'ئەم وشەن‌هێنیە زۆر دوبارە بۆتەوە، تکایە وشەیەکی تر بنوسە.';
-
-          }
-        } else {
-          this.RUsernameError = '';
-          this.RPhoneNumberError = '';
-          this.REmailError = '';
-          this.RPasswordError = '';
-          this.RPasswordConfiremError = '';
-        }
-      });
-
-    } else {
-
-      if (this.registrationForm.value.username == undefined) {
-        this.RUsernameError = 'پێویستە ناوی بەکارهێنەر لە ١٠ پیت کەمترنەبێت.'
-      } else
-        if (this.registrationForm.value.username.length < 10) {
-          this.RUsernameError = 'پێویستە ناوی بەکارهێنەر لە ١٠ پیت کەمترنەبێت.'
-        } else {
-          this.RUsernameError = '';
-        }
-
-
-      if (this.registrationForm.value.phoneNumber == undefined) {
-        this.RPhoneNumberError = 'ژمارە تەلەفون نادروستە.'
-      } else
-        if (this.registrationForm.value.phoneNumber.length != 11 || this.registrationForm.value.phoneNumber[0] != 0) {
-          this.RPhoneNumberError = 'ژمارە تەلەفون نادروستە.'
-        } else {
-          this.RPhoneNumberError = '';
-        }
-
-
-      if (this.registrationForm.value.email == undefined) {
-        this.REmailError = 'ئیمەیڵ نادروستە.'
-      } else {
-        this.REmailError = '';
-      }
-
-
-      if (this.registrationForm.value.password == undefined) {
-        this.RPasswordError = 'پێویستە وشەی نهێنی لە ٨ پیت کەمتر نەبێت و (capital letter, small letter, هێما) ی تێدابێت و وشە نهێنیە باوەکان نەبێت.'
-      }
-      else if (this.registrationForm.value.password.length >= 8 && this.registrationForm.value.password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~])[0-9a-zA-Z`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]+$/)) {
-        this.RPasswordError = '';
-      } else if (!((this.registrationForm.value.password.length >= 8 && this.registrationForm.value.password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~])[0-9a-zA-Z`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]+$/)))) {
-        this.RPasswordError = 'پێویستە وشەی نهێنی لە ٨ پیت کەمتر نەبێت و (capital letter, small letter, هێما) ی تێدابێت و وشە نهێنیە باوەکان نەبێت.'
-      }
-
-
-
-      if (this.registrationForm.value.confiremPassword == undefined) {
-        this.RPasswordConfiremError = 'وشەنهێنیەکان هاوشێوەنین.'
-      }
-      else
-        if (this.registrationForm.value.confiremPassword != this.registrationForm.value.password) {
-          this.RPasswordConfiremError = 'وشەنهێنیەکان هاوشێوەنین.'
-        } else {
-          this.RPasswordConfiremError = '';
-        }
-
-    }
-
+    
   }
 
 
 
   onCheckVerification() {
-    this.registrationService.onGetMeForCheck(this.loginService.token).subscribe((response: any) => {
-
-      this.checkVerifyButtonString = 'Verified';
-      setTimeout(() => {
-        this.homeService.isVerifyEmailModalShow = false;
-        // if (this.homeService.accountType == 'demo account') {
-        //   this.router.navigate(['/demo_account']);
-        // } else if (this.homeService.accountType == 'real account') {
-        //   this.router.navigate(['/real_account_step_one']);
-        // }
-      }, 3000);
-
-console.log(response);
-
-    }, (error: any) => {
-      this.checkVerifyButtonString = 'Not Verified';
-console.log(error);
-
-    });
+    
   }
 
 
@@ -300,6 +230,11 @@ console.log(error);
 
   }
 
+  help:any=false;
+  ohelp() {
+    this.help =  !this.help;
+    
+  }
 
   onLogout() {
     this.loginService.token = localStorage.getItem('') ?? '';

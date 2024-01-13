@@ -147,6 +147,7 @@ export class NavbarComponent implements OnInit {
 
 
   onLogin() {
+    this.loginService.login=true;
     var token = localStorage.getItem('token') ?? '';
     if (token == '') {
       this.homeService.onShowModal('real account');
@@ -156,21 +157,45 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  onLogout() {
+  addnews() {
+    this.loginService.news=true;
+    // var token = localStorage.getItem('token') ?? '';
+    // if (token == '') {
+    //   this.homeService.onShowModal('real account');
+    // } else {
+    //   this.homeService.isVerifyEmailModalShow = true;
+    // }
+  }
 
-    this.loginService.token = localStorage.getItem('token') ?? '';
+
+  folder() {
+    this.loginService.folder=true;
+    // var token = localStorage.getItem('token') ?? '';
+    // if (token == '') {
+    //   this.homeService.onShowModal('real account');
+    // } else {
+    //   this.homeService.isVerifyEmailModalShow = true;
+    // }
+  }
+
+
+  
+  onLogout() {
+    this.loginService.notifi=true;
+
+    // this.loginService.token = localStorage.getItem('token') ?? '';
      
-      this.loginService.onLogout({}).subscribe((response: any) => {
-        // console.log(response);
-        this.loginService.token = '';
-        localStorage.removeItem('token');
-        this.router.navigate(['/']);
-        console.log(response);
+    //   this.loginService.onLogout({}).subscribe((response: any) => {
+    //     // console.log(response);
+    //     this.loginService.token = '';
+    //     localStorage.removeItem('token');
+    //     this.router.navigate(['/']);
+    //     console.log(response);
         
-      }, error => {
-        console.log(error);
+    //   }, error => {
+    //     console.log(error);
         
-      })
+    //   })
 
     
 

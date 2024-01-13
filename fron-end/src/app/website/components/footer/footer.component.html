@@ -1,317 +1,65 @@
- 
-
-<div class="w-full py-5 bg-green-dark hidden md:block">
-    <!-- <div class="h-24 lg:px-24 md:px-10 flex justify-between items-center ">
-        <img class="" src="../../../assets/icons/google.svg">
-        <img class="" src="../../../assets/icons/trello.svg">
-        <img class="" src="../../../assets/icons/monday.svg">
-        <img class="" src="../../../assets/icons/notion.svg">
-        <img class="" src="../../../assets/icons/slack.svg">
-        <button type="button"
-            class="inline-block px-7 py-3 text-opacity-75 bg-transparent border-2 border-gray-400 border-opacity-20 text-white font-medium text-sm rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-green-darker  transition duration-150 ease-in-out">
-            Became a Partner
-        </button>
-
-    </div>
-
-    <hr class="w-full opacity-10"> -->
-
-
-    <div class=" w-full lg:px-24 md:px-10 pb-12 flex items-center">
-
-        <div class="flex flex-col w-4/12">
-            <div class="h-10"></div>
-            <img class="w-[7vw]" src="../../../assets/icons/footer-blackstallion-logo.svg">
-            <div class="h-5"></div>
-            <div
-                class="text-gray-300 hover:text-primary-500  font-extralight cursor-pointer lg:text-[0.9vw] md:text-[1.1vw] tracking-wider">
-                {{"qoute" | translate}}
-            </div>
-            <!-- <div class="text-white opacity-70 font-extralight text-sm">
-                industry's.
-            </div> -->
-            <!-- <div class="h-6"></div> -->
-            <!-- <div class="flex justify-between w-7/12">
-                <img class="w-3/12 mr-1" src="../../../assets/icons/circle-facebook.svg">
-                <img class="w-3/12 mr-1" src="../../../assets/icons/circle-twiter.svg">
-                <img class="w-3/12 mr-1" src="../../../assets/icons/circle-whatsapp.svg">
-                <img class="w-3/12 mr-1" src="../../../assets/icons/circle-instagram.svg">
-            </div> -->
-        </div>
-
-        <div class="w-[7vw]"></div>
-
-        <div class="w-1/12 flex flex-col ">
-            <div class="h-14"></div>
-            <div [routerLink]="['/']"
-            class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"home" |
-                translate}}</div>
-            <div class="h-5"></div>
-            <div [routerLink]="['/market&alerts/news_detail']"
-            class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"news" |
-                translate}}</div>
-            <div class="h-5"></div>
-            <div
-            class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"services" | translate}}
-            </div>
-            <div class="h-5"></div>
-            <div
-                class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"payments" | translate}}
-            </div>
-        </div>
-
-        <div class="w-[8.5vw]"></div>
-
-        <div class="w-2/12 flex flex-col ">
-            <div class="h-14"></div>
-            <div [routerLink]="['/about']"
-                class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"whyblackfx" | translate}}
-            </div>
-            <div class="h-5"></div>
-            <div (click)="homeService.onTradingShowModal()"
-                class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"accounttype" | translate}}</div>
-            <div class="h-5"></div>
-            <div
-                class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"tradingplatforms" | translate}}</div>
-            <div class="h-5"></div>
-            <div
-                class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer">
-                {{"education" | translate}}
-            </div>
-        </div>
-
-        <div class="w-9"></div>
-
-        <div class="w-[28vw] flex flex-col font-roboto">
-
-            <div class="h-16"></div>
-
-            <div
-                class= "cursor-pointer opacity-95  flex items-start">
-                <img class="w-[1.3vw]" src="../../../assets/icons/phone.svg">
-                <div class="w-3"></div>
-                <div dir="ltr">
-                    <p class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer"> 0770 281 2020</p>
-                    <p class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer"> 0770 282 2020</p>
-                    <p class="text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer"> 0750 938 2020</p>
-                </div>
-            </div>
-
-            <div class="h-5"></div>
-
-            <div
-                class=" text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer flex">
-                <img class="w-[1.3vw]" src="../../../assets/icons/email.svg">
-                <a href="mailto:info@blackstallionfx.com" class="mx-3">
-                    info@blackstallionfx.com
-                </a>
-            </div>
-
-            <div class="h-5"></div>
-
-            <div
-                class=" text-white opacity-95 font-extralight lg:text-[0.9vw] md:text-[1.1vw] hover:text-primary-500 cursor-pointer flex items-start">
-                <img class="w-[2vw]" src="../../../assets/icons/location.svg">
-                <div class="w-7"></div>
-                <div class="flex flex-col justify-center">
-                    <a target="_blank"
-                        href="https://www.google.com/maps/place/Black+Stallion/@35.5658052,45.4014999,21z/data=!4m5!3m4!1s0x40002f686cb90d49:0x4052801002d25c37!8m2!3d35.5658052!4d45.4016367">
-                        <div>4th floor, building 3, 109 Handren, 35 Harem Street, Sulaymaniyah, Iraq</div>
-                    </a>
-
-                </div>
-            </div>
-
-        </div>
-
-        <div class="w-[6vw]"></div>
-
-        <div class="lg:w-[20vw] md:w-3/12 flex flex-col">
-            <div class="h-10"></div>
-            <button type="button" (click)="homeService.onTradingShowModal()"
-                class="inline-block px-3 w-full py-2 bg-primary-500  border-2  border-primary-500 text-white font-extralight lg:text-[0.9vw] md:text-[1.1vw] rounded-full hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-                {{ "starttrading" | translate}}
-            </button>
-
-            <div class="h-4"></div>
-
-            <button type="button" routerLink="demo_account"
-                class="inline-blockpx-3 w-full py-2 bg-transparent border-2 border-primary-500 text-white font-extralight lg:text-[0.9vw] md:text-[1.1vw] rounded-full hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-                {{ "freedemo" | translate}}
-            </button>
-        </div>
-
-    </div>
-
-
-    <div class="w-full flex justify-center">
-        <div class="w-[18vw] flex justify-between h-8">
-            <a class="w-[3vw] h-[3vw]" href="https://www.facebook.com/blackstallioncompany?mibextid=ZbWKwL"
-                target="_blank">
-                <img class=" w-full mx-1 cursor-pointer" src="../../../assets/icons/circle-facebook.svg">
-            </a>
-            <a class="w-[3vw] h-[3vw]" href="https://www.instagram.com/blackstallionfx/?igshid=ZGUzMzM3NWJiOQ%3D%3D"
-                target="_blank">
-                <img class=" w-full mx-1 cursor-pointer" src="../../../assets/icons/circle-instagram.svg">
-            </a>
-            <a class="w-[3vw] h-[3vw]" href="https://t.me/blackstallionfx" target="_blank">
-                <img class=" w-full mx-1 cursor-pointer" src="../../../assets/icons/telegram-green.svg">
-            </a>
-            <a class="w-[3vw] h-[3vw]" href="https://twitter.com/BlackXStallionf" target="_blank">
-                <img class=" w-full mx-1 cursor-pointer" src="../../../assets/icons/circle-twiter.svg">
-            </a>
-            <a class="w-[3vw] h-[3vw]" href="https://www.linkedin.com/company/88695037/admin/" target="_blank">
-                <img class=" w-full mx-1 cursor-pointer" src="../../../assets/icons/linkedin.svg">
-            </a>
-
-        </div>
-    </div>
-
-    <div class="h-9"></div>
-    <div dir="ltr"
-        class="w-full text-center lg:text-[0.8vw] md:text-[0.9vw] font-roboto opacity-60 text-white flex justify-center items-center">
-        © 2022 All rights reserved. Black Swift Company
-    </div>
-    <div class="h-3"></div>
-
-    <hr class="w-full opacity-10">
-
-    <div class="h-10"></div>
-
-    <div
-        class="w-full lg:px-24 md:px-10  font-extralight  tracking-wider leading-7 text-gray-300   lg:text-[0.9vw] md:text-[1.1vw]">
-        {{"disclaimer" | translate}} <br> 
-        <div class="w-full mt-[3vh] text-center text-green-400  lg:px-24 md:px-10  font-extralight  tracking-wider leading-7    lg:text-[0.9vw] md:text-[1.1vw] ">
-            {{"ezafa" | translate}}    
-            </div>
-        <span (click)="homeService.onDisclaimerPdfShowModal()"
-            class="hover:text-primary-500 underline cursor-pointer">( {{
-            "terms&condition" | translate}} )</span>
-    </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
 <!-- sm -->
-
-
-<div class="w-full bg-green-dark md:hidden block">
-
-    <!-- <div class="h-40 px-8 py-6 grid grid-cols-3 gap-5  items-center">
-        <img class="full" src="../../../assets/icons/google.svg">
-        <img class="full" src="../../../assets/icons/trello.svg">
-        <img class="full" src="../../../assets/icons/monday.svg">
-        <img class="full" src="../../../assets/icons/notion.svg">
-        <img class="full" src="../../../assets/icons/slack.svg">
-        <button type="button"
-            class="inline-block w-full py-3 text-opacity-75 bg-transparent border-2 border-gray-400 border-opacity-20 text-white font-medium text-sm rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-green-darker  transition duration-150 ease-in-out">
-            Became a Partner
-        </button>
-
-    </div> -->
+<div class="w-full bg-white md:hidden block">
 
     <hr class="w-full opacity-10">
 
-    <div class="w-full py-12 flex flex-col justify-center items-center">
+    <div class="w-full py-5 flex flex-col justify-center items-center">
 
-        <img class="w-3/12" src="../../../assets/icons/footer-blackstallion-logo.svg">
+        <img class="w-3/12" src="../../../assets/images/logo.jpeg">
         <div class="h-7"></div>
-        <div class="text-white px-12 opacity-95 text-center font-extralight text-[3.5vw]">
+        <div class="text-green-dark px-12 opacity-95 text-center font-extralight text-[3.5vw]">
             {{ "qoute" | translate}}
         </div>
-        <div class="h-10"></div>
+        <div class="h-5"></div>
 
+         <div class="text-red-700 underline font-bold px-12 opacity-95 text-center font-extralight text-[3.5vw]">
+            {{ "contactus" | translate}}
+        </div>
+        <div class="h-5"></div>
 
-
-        <div class="text-white w-56 font-roboto opacity-95 font-extralight text-[3vw] flex justify-center items-start">
-            <img class="w-[2.5vw] mt-2" src="../../../assets/icons/phone.svg">
-            <div class="w-2"></div>
-            <div dir="ltr">
-                <p> 0770 281 2020</p>
-                <p> 0770 282 2020</p>
-                <p> 0750 938 2020</p>
+        <div class="text-green-dark w-[90vw] font-roboto opacity-95 font-extralight text-[3vw] flex justify-center items-start">
+             <div dir="ltr" class=" flex ">
+               <div class="flex justify-center items-center "> <img class="w-[2.5vw] mx-[3vw]  " src="../../../assets/images/phone.png">
+                <p class="text-gray-600"> 0770 359 7983</p></div>
+                
+                <div class="flex justify-center  items-center"> <img class="w-[2.5vw] mx-[3vw]  " src="../../../assets/images/phone.png">
+                    <p class="text-gray-600">0773 544 4546</p></div>
+                
+                    <div class="flex justify-center  items-center"> <img class="w-[2.5vw] mx-[3vw]  " src="../../../assets/images/phone.png">
+                        <p class="text-gray-600"> 0751 015 4704</p></div>
+                 
             </div>
         </div>
 
-        <div class="h-8"></div>
+        <div class="h-4"></div>
 
-        <div class="text-white w-56 opacity-95 font-roboto font-extralight text-[3vw] flex justify-center">
-            <img class="w-[3vw]" src="../../../assets/icons/email.svg">
-            <div class="mx-2 ">
+        <div class="text-green-dark w-56 opacity-95 font-roboto font-extralight text-[3vw] flex justify-center">
+            <img class="w-[4vw]" src="../../../assets/images/email.jpeg">
+            <div class="mx-[1vw] ">
                 <a href="mailto:info@blackstallionfx.com">
-                    info@blackstallionfx.com
+                    sima.sleman2000@gmail.com
                 </a>
             </div>
         </div>
 
-        <div class="h-8"></div>
+        <div class="h-3"></div>
 
-        <div class="text-white w-[60vw] opacity-95 font-extralight text-[3vw]  flex items-start">
-            <img class="w-[3vw]" src="../../../assets/icons/location.svg">
+        <div class="text-green-dark w-56 opacity-95 font-roboto font-extralight text-[3vw] flex justify-center">
+            <img class="w-[3.5vw] mx-[1vw]" src="../../../assets/images/loca.png">
             <div class=""></div>
 
-            <div class=" font-roboto text-center w-[52vw]">
+            <div class=" font-roboto text-center  ">
                 <a target="_blank"
-                    href="https://www.google.com/maps/place/Black+Stallion/@35.5658052,45.4014999,21z/data=!4m5!3m4!1s0x40002f686cb90d49:0x4052801002d25c37!8m2!3d35.5658052!4d45.4016367">
-                    <div>4th floor, building 3, 109 Handren, 35 Harem Street, Sulaymaniyah, Iraq</div>
+                    >
+                    <div> Sulaymaniyah, Kurdistan, Iraq</div>
                 </a>
 
             </div>
         </div>
 
-        <div class="h-16"></div>
+        <div class="h-6"></div>
 
-
-
-        <div class="w-full grid grid-cols-4 gap-5 items-center text-[3vw] text-center justify-center  px-10">
-            <div [routerLink]="['/']" routerLinkActive="router-link-active"
-                class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{ "home" | translate}}</div>
-            <div [routerLink]="['/market&alerts/news_detail']"
-                class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{ "news" | translate}}</div>
-            <div class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{ "services" | translate}}
-            </div>
-            <div class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{
-                "payments" | translate}}
-            </div>
-            <div [routerLink]="['/about']"
-                class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{ "whyblackfx" | translate}}
-            </div>
-            <div (click)="homeService.onTradingShowModal()"
-                class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{"accounttype" | translate}}</div>
-            <div class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{"tradingplatforms" | translate}}</div>
-            <div class="text-white opacity-95 font-extralight hover:text-primary-500 cursor-pointer">
-                {{"education" | translate}}
-            </div>
-        </div>
-
-        <div class="h-14"></div>
-
-        <div class="w-ful flex justify-center">
+        <!-- <div class="w-ful flex justify-center">
             <div class="flex justify-between h-8">
                 <a href="https://www.facebook.com/blackstallioncompany?mibextid=ZbWKwL" target="_blank">
                     <img class=" w-[10vw] h-[10vw] mx-1 cursor-pointer" src="../../../assets/icons/circle-facebook.svg">
@@ -322,41 +70,27 @@
                 </a>
                 <a href="https://t.me/blackstallionfx" target="_blank">
                     <img class=" w-[10vw] h-[10vw] mx-1 cursor-pointer" src="../../../assets/icons/telegram-green.svg">
-                </a>
-                <a href="https://twitter.com/BlackXStallionf" target="_blank">
-                    <img class=" w-[10vw] h-[10vw] mx-1 cursor-pointer" src="../../../assets/icons/circle-twiter.svg">
-                </a>
+                </a> 
                 <a href="https://www.linkedin.com/company/88695037/admin/" target="_blank">
                     <img class=" w-[10vw] h-[10vw] mx-1 cursor-pointer" src="../../../assets/icons/linkedin.svg">
                 </a>
-
-
             </div>
-        </div>
+        </div> -->
 
-        <div class="h-16"></div>
+        <!-- <div class="h-16"></div> -->
         <div dir="ltr"
-            class="w-full text-center text-[2vw] font-roboto opacity-60 text-white flex justify-center items-center">
-            © 2022 All rights reserved. Black Swift Company
+            class="w-full text-center text-[2vw] font-roboto opacity-60 text-green-dark flex justify-center items-center">
+            © 2024 All rights reserved. <div class="text-[2vw] font-bold text-red-600"> Sima Sleman </div> Software developer
         </div>
 
 
     </div>
 
-    <!-- <div class="h-5"></div> -->
-
-    <hr class="w-full opacity-10">
-
-    <div class="h-10"></div>
-
-    <div class="w-full px-10  font-extralight  tracking-wider leading-7 text-gray-300   text-[3vw]">
-        {{"disclaimer" | translate}} <br>
-        <div class="w-full mt-[3vh] text-center text-green-400 text-[3vw]  ">
-            {{"ezafa" | translate}}    
-            </div>
-        <span (click)="homeService.onDisclaimerPdfShowModal()"
-            class="hover:text-primary-500 underline cursor-pointer">( {{
-            "terms&condition" | translate}} )</span>
+ 
+ 
+    <div class="w-full px-10  font-extralight  tracking-wider leading-7 text-gray-400   text-[3vw]">
+        {{"blodfinal" | translate}} <br>
+       
     </div>
 
     <div class="h-14"></div>

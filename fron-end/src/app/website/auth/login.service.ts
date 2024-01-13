@@ -8,6 +8,11 @@ import { NetworkHandlerService } from '../services/network-handler.service';
 })
 export class LoginService {
   token = localStorage.getItem('token') ?? '';
+    login:any=false;
+    signin:any=false;
+    news:any=false;
+    folder:any=false;
+    notifi:any=false;
 
   constructor(private networkHandler: NetworkHandlerService, private router: Router) { }
 

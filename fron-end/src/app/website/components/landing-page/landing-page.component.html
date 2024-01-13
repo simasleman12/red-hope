@@ -1,668 +1,137 @@
-<div class=" md:block hidden ">
-    <div class="absolute z-0">
-      <swiper dir="rtl" id="landing-section" [centeredSlides]="true" [spaceBetween]="0" [slidesPerView]="'auto'"
-        [loop]="true" [loopFillGroupWithBlank]="true" [centeredSlides]="true"
-        [autoplay]="{delay: 5000,  disableOnInteraction: false}" [speed]="1000" [navigation]="false" class="w-full">
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/background-image1.svg" alt="">
-        </ng-template>
-        
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/change2.png" alt="">
-        </ng-template>
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/change1.png" alt="">
-        </ng-template>
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/background-image2.svg" alt="">
-        </ng-template>
-      </swiper>
-    </div>
-  
-  
-    <div class=" relative z-10 w-full flex justify-center items-center">
-      <div class="lg:w-7/12 md:10/12 flex flex-col justify-center items-center">
-        <div class="h-28"></div>
-  
-  
-  
-        <div *ngIf="languageService.selectedLanguage == 'en'"
-          class=" font-bold lg:text-[3.7vw] md:text-[4.5vw] lg:w-[36vw] md:w-[44vw] text-center text-white md:leading-[7vw] lg:leading-[6vw] xl:leading-[5.5vw] ">
-          A World-Class<span class="text-primary-500"> Trading </span> Experience
-        </div>
-        <div *ngIf="languageService.selectedLanguage == 'ar'"
-          class=" font-bold lg:text-[3.7vw] md:text-[4.5vw] lg:w-[35vw] md:w-[49vw]  text-center text-white md:leading-[7vw] lg:leading-[6vw] xl:leading-[5.5vw]">
-          تجربة <span class="text-primary-500">تداول </span> عالمية
-        </div>
-        <div *ngIf="languageService.selectedLanguage == 'ku'"
-          class=" font-bold lg:text-[3.7vw] md:text-[4.5vw] lg:w-[33vw] md:w-[41vw]  text-center text-white md:leading-[7vw] lg:leading-[6vw] xl:leading-[5.5vw]">
-          ئەزموونی <span class="text-primary-500">بازرگانی </span> لە ئاستێکی جیهانی
-        </div>
-        <div class="h-4 "></div>
-        <div class="w-9/12  opacity-95 text-green-50 text-center lg:text-[1.3vw] md:text-[1.8vw] leading-[2.1vw] font-light ">
-          {{"qoute" | translate}}
-        </div>
-  
-        <div class="h-14 w-full "></div>
-  
-  
-        <div class="h-10 w-full flex justify-center items-center">
-          <!-- (click)="homeService.onShowModal('real account')" -->
-          <button routerLink="real_account_step_one" type="button"
-            class="block lg:w-[17vw] md:w-3/12 px-3 py-3 bg-primary-500 border-2 border-primary-500 text-white font-medium text-[1.5vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-            {{"realaccount" | translate}}
-          </button>
-  
-          <div class="w-4"></div>
-          <!-- (click)="homeService.onShowModal('demo account')"  -->
-          <button routerLink="demo_account" type="button"
-            class="inline-block lg:w-[17vw] md:w-3/12 px-3 py-3 bg-transparent border-2 border-primary-500 text-white font-medium text-[1.5vw] rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-            {{"freedemo" | translate }}
-          </button>
-        </div>
+<div class=" block md:hidden ">
+  <div class="absolute z-0">
+    <swiper dir="rtl" id="landing-section" [centeredSlides]="true" [spaceBetween]="0" [slidesPerView]="'auto'"
+      [loop]="true" [loopFillGroupWithBlank]="true" [centeredSlides]="true"
+      [autoplay]="{delay: 4000,  disableOnInteraction: false}" [speed]="1000" [navigation]="false" class="w-full">
+      <ng-template swiperSlide>
+        <img class="object-cover   opacity-70 h-[93vh]   w-full" src="../../../../assets/images/bb.jpeg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover   opacity-70 h-[93vh]   w-full" src="../../../../assets/images/b4.jpeg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover   opacity-70 h-[93vh]    w-full" src="../../../../assets/images/b.jpeg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover  opacity-70 h-[93vh]   w-full" src="../../../../assets/images/b1.avif" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover  opacity-70 h-[93vh]   w-full" src="../../../../assets/images/b2.avif" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover   opacity-70 h-[93vh]   w-full" src="../../../../assets/images/b8.jpeg" alt="">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img class="object-cover   opacity-70 h-[93vh]   w-full" src="../../../../assets/images/bh.jpeg" alt="">
+      </ng-template>
+    </swiper>
+  </div>
+  <div class=" relative z-10 w-full flex justify-center  items-center">
+    <div class=" w-10/12 flex flex-col justify-center items-center">
+ 
+      <div *ngIf="languageService.selectedLanguage == 'en'"
+        class=" font-bold text-[8vw]  w-[70vw]  text-center text-white leading-[12vw] ">
+       Red Hope <br><span class="text-red-700"> To preserve a life  </span> , giving some blood is important.
+      </div>
+      <div *ngIf="languageService.selectedLanguage == 'ar'"
+        class=" font-bold text-[7vw]  w-[70vw]   text-center text-white leading-[10vw]">
+        ، التبرع ببعض الدم أمر مهم. <span class="text-red-700">للحفاظ على الحياة  </span> Red Hope
+      </div>
+      <div *ngIf="languageService.selectedLanguage == 'ku'"
+        class=" font-bold text-[7vw]  w-[63vw]  text-center text-white leading-[10vw]">
+        بۆ پاراستنی ژیانێک   <span class="text-red-700">  , پێدانی هەندێک خوێن گرنگە. </span>   Red Hope
+      </div>
+
+      <div
+        [ngClass]="{ 'h-[6vw]': languageService.selectedLanguage == 'en' || languageService.selectedLanguage == 'ku', 'h-[5vw]': languageService.selectedLanguage == 'ar'  }"
+        class=" "></div>
+      <div class="w-full  opacity-95 text-gray-700 text-center text-[4vw] font-bold ">
+        {{"qoute" | translate}}
+      </div>
+
+      <div class="h-16 w-full "></div>
+      <div  class=" w-full flex flex-col justify-center items-center">
+        <button  *ngIf="loginService.token != '' "   (click)="logins()"
+          class="block w-[60vw] py-3 bg-red-700 border-2 border-red-700 text-white font-medium text-[4vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-red-700  transition duration-150 ease-in-out">
+          {{"realaccount" | translate}}
+        </button>
+
+        <div  *ngIf="loginService.token != '' " class="h-4"></div>
+        <div  *ngIf="loginService.token == '' " class="h-10">
+          <button  *ngIf="loginService.token == '' "   (click)="addnews()"
+              class="inline-block w-[60vw] py-3 bg-red-700 border-2 border-red-700 text-red-700 font-medium text-[4vw] rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-red-700  transition duration-150 ease-in-out">
+           <div class="text-[4vw] text-center text-white">{{'news'|translate}}  +</div>
+        </button>
+
+           </div>
+        <div  *ngIf="loginService.token == '' " class="h-10"></div>
+        <div  *ngIf="loginService.token == '' " class="h-10"></div>
+
+        <button   *ngIf="loginService.token != '' "  (click)="signup()"
+          class="inline-block w-[60vw] py-3 bg-transparent border-2 border-red-700 text-red-700 font-medium text-[4vw] rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-red-700  transition duration-150 ease-in-out">
+          {{"freedemo" | translate}}
+        </button>
       </div>
     </div>
-  
-    <div  class="h-20 md:h-10"></div>
-  
-      <!-- lg -->
-
-    <div class=" w-full hidden transform translate-y-24 lg:flex justify-center">
-      <div class=" h-24  bg-transparent  w-10/12   flex items-center justify-center ">
-
-      
-
-        <swiper dir="rtl" [spaceBetween]="1" [slidesPerView]="1" [loop]="true" [loopFillGroupWithBlank]="true"
-        [pagination]="false" [navigation]="true" 
-        [autoplay]="{delay: 5000,  disableOnInteraction: false}" [speed]="1000"
-        class="w-full">
-        <ng-template *ngFor="let item of items; index as i;" swiperSlide>
-          <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
-            class="flex justify-center  pb-10 ">
-
-
-            <div
-            class="flex w-[20vw] mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 ">
-            <div class="flex flex-col items-center">
-             
- <div  class="font-medium text-[1.3vw] font-roboto">{{item}}/USD</div>
- <div class="h-4"></div>
- <div class="flex justify-between items-center ">
-  
-   <span *ngIf="changeCurrenciesService.rates == undefined" class="text-[1vw] font-medium"> 17.800</span>
-   <span class="text-[1vw] lg:mx-[1vw] xl:mx-[1vw] font-medium text-red-500">
-172.0         </span>
-   <span class="text-[1vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-     {{"trade" | translate }}
-   </span>
- </div> 
-            </div>
-          </div>
-
-          <div
-          class="flex w-[20vw] mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 ">
-          <div class="flex flex-col items-center">
-           
-<div  class="font-medium text-[1.3vw] font-roboto">{{item}}/USD</div>
-<div class="h-4"></div>
-<div class="flex justify-between items-center ">
-
- <span *ngIf="changeCurrenciesService.rates == undefined" class="text-[1vw] font-medium"> 17.800</span>
- <span class="text-[1vw] lg:mx-[1vw] xl:mx-[1vw] font-medium text-red-500">
-172.0         </span>
- <span class="text-[1vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-   {{"trade" | translate }}
- </span>
-</div> 
-          </div>
-        </div>
-
-            <div
-            class="flex w-[20vw] mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 ">
-            <div class="flex flex-col items-center">
-             
- <div  class="font-medium text-[1.3vw] font-roboto">{{item}}/USD</div>
- <div class="h-4"></div>
- <div class="flex justify-between items-center ">
-  
-   <span *ngIf="changeCurrenciesService.rates == undefined" class="text-[1vw] font-medium"> 17.800</span>
-   <span class="text-[1vw] lg:mx-[1vw] xl:mx-[1vw] font-medium text-red-500">
-172.0         </span>
-   <span class="text-[1vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-     {{"trade" | translate }}
-   </span>
- </div> 
-            </div>
-          </div>
-  
-          <div
-          class="flex w-[20vw] mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 ">
-          <div class="flex flex-col items-center">
-           
-<div  class="font-medium text-[1.3vw] font-roboto">{{item}}/USD</div>
-<div class="h-4"></div>
-<div class="flex justify-between items-center ">
-
- <span *ngIf="changeCurrenciesService.rates == undefined" class="text-[1vw] font-medium"> 17.800</span>
- <span class="text-[1vw] lg:mx-[1vw] xl:mx-[1vw] font-medium text-red-500">
-172.0         </span>
- <span class="text-[1vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-   {{"trade" | translate }}
- </span>
-</div> 
-          </div>
-        </div>
-
-
-        
-
-          </div>
-
-        </ng-template>
-      </swiper>
-  
-
-
-
-
-        
-      </div>
-    </div>
+  </div>
 
  
-  
-    <!-- md -->
-    <div class=" w-full hidden md:flex lg:hidden  transform translate-y-36 justify-center">
-      <div class="  bg-transparent  w-11/12   flex items-center justify-center ">
-        <swiper dir="rtl" [spaceBetween]="10" [slidesPerView]="1" [loop]="true" [loopFillGroupWithBlank]="true"
-          [pagination]="false" [navigation]="true" class="w-full">
-          <ng-template *ngFor="let item of items; index as i;" swiperSlide>
-            <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' "
-              class="flex justify-center px-10 pb-10 m">
-  
-              <div
-                class="flex w-5/12 mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 lg-padding-card">
-                <div class="flex flex-col items-center">
-                  <div class="font-medium text-[2.8vw] font-roboto">{{item }}/USD</div>
-                  <div class="h-4"></div>
-                  <div class="flex justify-between items-center w-48">
-                    <span class="text-[1.5vw] font-medium">
-                      1.002881sj
-                    </span>
-                    <span class="text-[1.5vw] font-medium text-red-500">
-                      1.00%
-                    </span>
-                    <span class="text-[1.5vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-                      {{"trade" | translate}}
-                    </span>
-                  </div>
-                </div>
+  <div id="landing-page-sm" class="  mt-[3vh]  w-full card-shadow">
+    <swiper dir="rtl" class="w-full shadow-xl"  [autoplay]="{delay: 4000,  disableOnInteraction: false}" [speed]="1000"  style="background-color: #E6ECEF;" [spaceBetween]="10"
+      [slidesPerView]="1" [loop]="true" [loopFillGroupWithBlank]="true" [pagination]="false" [navigation]="false"
+      class="w-full">
+      <ng-template *ngFor="let item of items; index as i;" swiperSlide>
+        <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' " class="flex justify-center px-10">
+          <span class="text-[4vw] text-red-600 font-medium">
+            News  </span>
+          <div
+            class="flex w-full  items-center justify-center bg-green-gray text-green-dark rounded-lg py-7 lg-padding-card">     
+            <div class="flex flex-col items-center">
+              <div class="   ">
+                <div class="font-medium text-[3vw] text-black font-bold font-roboto">Sima:</div>
+                <div class="font-medium text-[3vw] text-gray-500 font-roboto">I have some Problem And I'm need A+ type of Blood who can help me??  </div>
               </div>
-  
-              <div
-                class="flex w-5/12 mx-2 items-center justify-center bg-green-gray shadow-xl text-green-dark rounded-lg py-7 lg-padding-card">
-                <div class="flex flex-col items-center">
-                  <div class="font-medium text-[2.8vw] font-roboto ">{{item}}/USD</div>
-                  <div class="h-4"></div>
-                  <div class="flex justify-between items-center w-48">
-                    <span class="text-[1.5vw] font-medium">
-                      1.002881
-                    </span>
-                    <span class="text-[1.5vw] font-medium text-red-500">
-                      1.00%
-                    </span>
-                    <span class="text-[1.5vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-                      {{"trade" | translate}}
-                    </span>
-                  </div>
-                </div>
+              <div class="h-4"></div>
+              <div class="flex justify-between items-center">
+                <span class="text-[3.5vw] font-medium">
+                  Sulaymanyah/goizha                 </span>
+                <span class="w-[3vw]"></span>
+                <span class="text-[3.5vw] font-medium text-red-700">
+                                   07703597983
+                </span>
+                <span class="w-[3vw]"></span>
+                <span class="text-[3.5vw] font-medium border-2 border-gray-700 rounded px-4 py-[0.1vh]">
+                  {{"trade" | translate}}
+                </span>
               </div>
-  
             </div>
-  
-          </ng-template>
-        </swiper>
-  
-  
-  
-  
-      </div>
-  
-    </div>
-  
-    <!-- <div class="h-20"></div> -->
-  
-  
-  
+          </div>
+        </div>
+
+      </ng-template>
+    </swiper>
+
+
   </div>
-  
-  
-  
-  
-  
-  
-  <div class=" block md:hidden ">
-    <div class="absolute z-0">
-      <swiper dir="rtl" id="landing-section" [centeredSlides]="true" [spaceBetween]="0" [slidesPerView]="'auto'"
-        [loop]="true" [loopFillGroupWithBlank]="true" [centeredSlides]="true"
-        [autoplay]="{delay: 4000,  disableOnInteraction: false}" [speed]="1000" [navigation]="false" class="w-full">
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/background-image1.svg" alt="">
-        </ng-template>
-        <ng-template swiperSlide>
-          <img class="object-cover h-[650px] w-full" src="../../../../assets/images/background-image2.svg" alt="">
-        </ng-template>
-      </swiper>
-    </div>
-    <div class=" relative z-10 w-full flex justify-center items-center">
-      <div class=" w-10/12 flex flex-col justify-center items-center">
-        <div class="h-20"></div>
-  
-        <div *ngIf="languageService.selectedLanguage == 'en'"
-          class=" font-bold text-[8vw]  w-[70vw]  text-center text-white leading-[12vw] ">
-          A World-Class <br><span class="text-primary-500"> Trading </span> Experience
-        </div>
-        <div *ngIf="languageService.selectedLanguage == 'ar'"
-          class=" font-bold text-[7vw]  w-[70vw]   text-center text-white leading-[10vw]">
-          تجربة <span class="text-primary-500">تداول </span> عالمية
-        </div>
-        <div *ngIf="languageService.selectedLanguage == 'ku'"
-          class=" font-bold text-[7vw]  w-[63vw]  text-center text-white leading-[10vw]">
-          ئەزموونی <span class="text-primary-500">بازرگانی </span> لە ئاستێکی جیهانی
-        </div>
-  
-        <div
-          [ngClass]="{ 'h-[6vw]': languageService.selectedLanguage == 'en' || languageService.selectedLanguage == 'ku', 'h-[5vw]': languageService.selectedLanguage == 'ar'  }"
-          class=" "></div>
-        <div class="w-full  opacity-95 text-green-50 text-center text-[4vw] font-light ">
-          {{"qoute" | translate}}
-        </div>
-  
-  
-        <div class="h-16 w-full "></div>
-  
-  
-        <div class=" w-full flex flex-col justify-center items-center">
-          <button routerLink="real_account_step_one" type="button"
-            class="block w-[60vw] py-3 bg-primary-500 border-2 border-primary-500 text-white font-medium text-[4vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-            {{"realaccount" | translate}}
-          </button>
-  
-          <div class="h-4"></div>
-  
-          <button routerLink="demo_account" type="button"
-            class="inline-block w-[60vw] py-3 bg-transparent border-2 border-primary-500 text-white font-medium text-[4vw] rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-            {{"freedemo" | translate}}
-          </button>
-        </div>
-      </div>
-    </div>
-  
-    <div class="h-[20vw]"></div>
-  
-    <div id="landing-page-sm" class="  w-full card-shadow">
-      <swiper dir="rtl" class="w-full shadow-xl" style="background-color: #E6ECEF;" [spaceBetween]="10"
-        [slidesPerView]="1" [loop]="true" [loopFillGroupWithBlank]="true" [pagination]="false" [navigation]="true"
-        class="w-full">
-        <ng-template *ngFor="let item of items; index as i;" swiperSlide>
-          <div [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' " class="flex justify-center px-10">
-  
-            <div
-              class="flex w-full mx-2 items-center justify-center bg-green-gray text-green-dark rounded-lg py-7 lg-padding-card">
-              <div class="flex flex-col items-center">
-                <div class="font-medium text-[6.5vw] font-roboto">{{item }}/USD</div>
-                <div class="h-4"></div>
-                <div class="flex justify-between items-center">
-                  <span class="text-[3.5vw] font-medium">
-                    1.002
-                  </span>
-                  <span class="w-[3vw]"></span>
-                  <span class="text-[3.5vw] font-medium text-red-500">
-                    1.00%
-                  </span>
-                  <span class="w-[3vw]"></span>
-                  <span class="text-[3.5vw] font-medium border-2 border-primary-500 rounded px-4 py-1">
-                    {{"trade" | translate}}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-  
-        </ng-template>
-      </swiper>
-  
-  
-    </div>
-  
-    <div class="h-5 bg-transparent w-full"></div>
-  
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- Code block starts -->
-  <div *ngIf="homeService.isModalShow">
-  
-    <div
-      class=" overflow-y-scroll bg-opacity-40 py-5 h-screen bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
-      id="modal">
-  
-      <!-- <div class="w-full flex justify-end  mb-10 ">
-              <div (click)="onReset()"
-                  class="bg-white cursor-pointer relative mx-10 rounded-full flex justify-center items-center w-10 h-10">
-                  <img src="../../../assets/icons/close.svg">
-              </div>
-          </div> -->
-  
-      <div role="alert" class="scale-90 opacity-100 lg:w-6/12 md:w-8/12 w-full bg-white rounded-lg mx-auto ">
-        <div class="w-full pt-5 px-5 flex justify-end ">
-          <div class="w-5 h-5 cursor-pointer"> <img class="w-full" (click)="onReset()"
-              src="../../../assets/icons/close.svg"> </div>
-        </div>
-        <div class=" w-full flex justify-center">
-          <div *ngIf="homeService.modalStatus == 'registration'" (click)="onChangeModalStatus('registration')"
-            class="cursor-pointer w-6/12 h-20 bg-wite text-2xl text-[4vw] flex justify-center items-center text-green-dark">
-            {{"registration" | translate}}
-          </div>
-          <div *ngIf="homeService.modalStatus == 'login'" (click)="onChangeModalStatus('login')"
-            class="cursor-pointer w-6/12 h-20 bg-wite text-2xl text-[4vw] flex justify-center items-center text-green-dark">
-            {{"login" | translate}}
-          </div>
-  
-        </div>
-  
-  
-        <!-- registration -->
-  
-        <div *ngIf="homeService.modalStatus == 'registration'" class="w-full h-80 bg-white rounded-b-lg">
-  
-          <form [formGroup]="registrationForm" (ngSubmit)="onSubmitRegistration()"
-            class="bg-white rounded px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="username">
-                {{"username" | translate}}
-              </label>
-              <input formControlName="username"
-                [ngClass]="{'border-red-600' : !registrationForm.get('username')?.valid && registrationForm.get('username')?.touched }"
-                class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username" type="text">
-              <div *ngIf=" RUsernameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{RUsernameError}}
-              </div>
-            </div>
-            <div class="w-full mb-4 " dir="ltr">
-              <label [dir]="languageService.selectedLanguage == 'en' ? 'ltr' : 'rtl' " for="phoneNumber"
-                class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="phonenumber">
-                {{"phonenumber" | translate}}
-              </label>
-              <input formControlName="phoneNumber"
-                [ngClass]="{'border-red-600' : !registrationForm.get('phoneNumber')?.valid && registrationForm.get('phoneNumber')?.touched }"
-                class="form-control appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                type="tel" id="phonenumber">
-              <div *ngIf=" RPhoneNumberError != ''" class="text-sm text-red-600 mx-3 mt-1">
-                {{RPhoneNumberError}}</div>
-  
-            </div>
-            <div class="mb-4">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="email">
-                {{"email" | translate}}
-              </label>
-              <input
-                [ngClass]="{'border-red-600' : !registrationForm.get('email')?.valid && registrationForm.get('email')?.touched }"
-                formControlName="email"
-                class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email" type="email">
-              <div *ngIf=" REmailError != ''" class="text-sm text-red-600 mx-3 mt-1">{{REmailError}}</div>
-  
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="password">
-                {{"password" | translate}}
-              </label>
-              <div class="relative">
-                <input
-                  [ngClass]="{'border-red-600' : !registrationForm.get('password')?.valid && registrationForm.get('password')?.touched }"
-                  formControlName="password"
-                  class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password" [type]="showPassword ? 'text' : 'password'">
-                <div *ngIf="languageService.selectedLanguage == 'en'" (click)="onShowPassword()"
-                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer" src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
-                </div>
-                <div *ngIf="!(languageService.selectedLanguage == 'en')" (click)="onShowPassword()"
-                  class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer" src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
-                </div>
-              </div>
-              <div *ngIf=" RPasswordError != ''" class="text-sm text-red-600 mx-3 mt-1">{{RPasswordError}}
-              </div>
-  
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="confirem">
-                {{"confirempassword" | translate}}
-              </label>
-              <div class="relative">
-                <input
-                  [ngClass]="{'border-red-600' : !registrationForm.get('confiremPassword')?.valid && registrationForm.get('confiremPassword')?.touched }"
-                  formControlName="confiremPassword"
-                  class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="confirem" [type]="showConfiremPassword ? 'text' : 'password'">
-                <div *ngIf="languageService.selectedLanguage == 'en'" (click)="onShowConfiremPassword()"
-                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer"
-                    src="../../../assets/icons/{{showConfiremPassword ? 'hide' : 'show'}}.svg">
-                </div>
-                <div *ngIf="!(languageService.selectedLanguage == 'en')" (click)="onShowConfiremPassword()"
-                  class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer"
-                    src="../../../assets/icons/{{showConfiremPassword ? 'hide' : 'show'}}.svg">
-                </div>
-              </div>
-              <div *ngIf=" RPasswordConfiremError != ''" class="text-sm text-red-600 mx-3 mt-1">
-                {{RPasswordConfiremError}}</div>
-  
-            </div>
-  
-            <div class="h-6"></div>
-            <!-- (click)="homeService.onShowModal()"  -->
-            <button type="submit"
-              class="block mx-auto w-7/12 py-3 md:text-base text-[4vw] bg-primary-500 border-2 border-primary-500 text-white font-medium  rounded-md hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-              {{"registernow" | translate}}
-            </button>
-  
-            <div class="h-8"></div>
-  
-            <div class="text-gray-900 md:text-base text-[4vw] text-center font-medium flex justify-center">
-              {{"alreadyhaveanaccount?" | translate}}
-              <span class="text-primary-500  cursor-pointer" (click)="onChangeModalStatus('login')">
-                &nbsp;{{"login"
-                | translate}}</span>
-            </div>
-          </form>
-  
-  
-          <div class=" h-20 w-full bg-opacity-40  bg-transparent"></div>
-        </div>
-  
-  
-  
-        <!-- Login -->
-  
-        <div *ngIf="homeService.modalStatus == 'login'" class="w-full h-80 bg-white rounded-b-lg">
-  
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()" class="bg-white rounded-b-lg px-8 pt-6 pb-8 mb-4 ">
-  
-            <div class="mb-4">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="email">
-                {{"email" | translate}}
-              </label>
-              <input [ngClass]="{'border-red-600' : !loginForm.get('email')?.valid && loginForm.get('email')?.touched }"
-                formControlName="email"
-                class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="email" type="email">
-              <div *ngIf=" LEmailError != ''" class="text-sm text-red-600 mx-3 mt-1">{{LEmailError}}
-              </div>
-            </div>
-            <div class="mb-6">
-              <label class="block text-gray-700 md:text-sm text-[3.5vw] mb-2" for="password">
-                {{"password" | translate}}
-              </label>
-              <div class="relative ">
-  
-                <input
-                  [ngClass]="{'border-red-600' : !loginForm.get('password')?.valid && loginForm.get('password')?.touched }"
-                  formControlName="password"
-                  class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password" [type]="showPassword ? 'text' : 'password'">
-                <div *ngIf="languageService.selectedLanguage == 'en'" (click)="onShowPassword()"
-                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer" src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
-                </div>
-  
-                <div *ngIf="!(languageService.selectedLanguage == 'en')" (click)="onShowPassword()"
-                  class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
-                  <img class="w-5 cursor-pointer" src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
-                </div>
-  
-              </div>
-              <div *ngIf=" LPasswordError != ''" class="text-sm text-red-600 mx-3 mt-1">{{LPasswordError}}
-              </div>
-  
-            </div>
-            <div *ngIf=" loginError != ''" class="text-sm text-red-600 mx-3 mt-1">{{loginError}}
-            </div>
-            <div class="w-full flex justify-end">
-              <span class="text-primary-500 text-sm font-light ">{{"forgotpassword?" |
-                translate}}</span>
-            </div>
-  
-  
-            <div class="h-10"></div>
-  
-            <!-- (click)="homeService.onShowModal()" -->
-            <button type="submit"
-              class="block mx-auto w-7/12 py-3 md:text-base text-[4vw] bg-primary-500 border-2 border-primary-500 text-white font-medium  rounded-md hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-              {{"login" | translate}}
-            </button>
-  
-            <div class="h-8"></div>
-  
-            <div class="text-gray-900 md:text-base text-[4vw] text-center font-medium flex justify-center">
-              {{"stilldon'thaveanaccount?"
-              | translate}}
-              <span (click)="onChangeModalStatus('registration')" class="text-primary-500 cursor-pointer">
-                &nbsp; {{"registernow" | translate}}
-              </span>
-            </div>
-          </form>
-  
-        </div>
-  
-  
-  
-  
-      </div>
-    </div>
-  
-  </div>
-  <!-- Code block ends -->
-  
-  
-  
-  
-  
-  
-  
-  
-  <!-- trading modal -->
-  
-  <div *ngIf="homeService.isTradingModalShow">
-  
-    <div
-      class=" overflow-y-scroll bg-opacity-40 py-5 h-screen bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
-      id="modal">
-      <!-- <div class="w-full flex justify-end  mb-10 ">
-              <div (click)="homeService.onTradingShowModal()"
-                  [ngClass]="{ 'right-10' : languageService.selectedLanguage == 'en',  'left-10' : languageService.selectedLanguage != 'en' }"
-                  class="bg-white cursor-pointer relative  rounded-full flex justify-center items-center w-10 h-10">
-                  <img src="../../../assets/icons/close.svg">
-              </div>
-          </div> -->
-  
-      <div role="alert" class="scale-90  opacity-100 lg:w-7/12 md:w-8/12 w-full bg-white  mt-20 rounded-lg mx-auto ">
-        <div class="w-full pt-5 px-5 flex justify-end ">
-          <div class="w-5 h-5 cursor-pointer"> <img class="w-full" (click)="homeService.onTradingShowModal() "
-              src="../../../assets/icons/close.svg"> </div>
-        </div>
-  
-        <div class=" md:py-24 py-20 w-full flex flex-col justify-center items-center">
-          <div class="md:text-2xl text-[4vw] text-center font-medium text-green-dark">
-            {{"starttradingwithblackstallion" | translate}}
-          </div>
-          <div class=" md:h-5 h-9"></div>
-          <div class="md:text-[1.2vw] text-[4vw]  text-green-dark">{{"pleaseselectanaccount" | translate}}</div>
-          <div class="h-10"></div>
-          <div class="w-full flex md:flex-row flex-col items-center justify-center">
-            <button routerLink="real_account_step_one" type="button"
-              class="block lg:w-4/12 md:w-5/12 w-7/12 py-4 bg-primary-500 border-2 border-primary-500 text-white font-medium md:text-xl text-[4vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-              {{"realaccount" | translate}}
-            </button>
-  
-            <div class="md:w-4 h-4 md:h-0"></div>
-  
-            <button routerLink="demo_account" type="button"
-              class="inline-block lg:w-4/12 md:w-5/12 w-7/12 py-4 bg-transparent border-2 border-primary-500 text-green-dark font-medium md:text-xl text-[4vw] rounded hover:shadow-lg  focus:outline-none focus:ring-0 active:bg-primary-700  transition duration-150 ease-in-out">
-              {{"freedemo" | translate }}
-            </button>
-          </div>
-          <div class="md:h-10 h-14"></div>
-          <div class="text-gray-900 text-center font-medium flex md:text-base text-[3.5vw] justify-center">
-            {{"alreadyhaveanaccount?" |
-            translate}} <span class="text-primary-500 cursor-pointer" (click)="homeService.onGoToLoginForm('')">
-              &nbsp;{{ "login" | translate }}</span></div>'
-  
-  
-  
-  
-        </div>
-  
-  
-  
-  
-      </div>
-    </div>
-  
-  </div>
-  
-  
-  
-  
-  <div *ngIf="homeService.isVerifyEmailModalShow">
+  <div class="h-5 bg-transparent w-full"></div>
+
+</div>
+  
+  <div *ngIf=" this.loginService.login==true">
   
     <div
       class=" overflow-hidden bg-opacity-40 py-5 h-screen bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
       id="modal">
-      <!-- <div class="w-full flex justify-end  mb-10 ">
+      <div class="w-full flex justify-end  mb-[1vh] ">
   
-              <div (click)="homeService.onVerifyEmailShowModal()"
-                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-10 h-10">
-                  <img src="../../../assets/icons/close.svg">
+              <div (click)="logins()"
+                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-5 h-5">
+                  <img src="../../../assets/icons/clo.webp">
               </div>
-          </div> -->
-      <div role="alert" class="scale-90 opacity-100 py-20 lg:w-6/12 md:w-8/12 w-full bg-white  mt-20 rounded-lg mx-auto ">
+          </div>
+      <div role="alert" class="scale-90 opacity-100 py-20 lg:w-6/12 md:w-8/12 w-full bg-white  mt-[4vh] rounded-lg mx-auto ">
   
         <div class=" w-full flex flex-col justify-center items-center">
-  
-  
           <div class="lg:text-[2.1vw] md:text-[2.4vw]  text-[5vw] font-medium text-green-dark">
             {{"verifyemail" | translate}}
           </div>
@@ -670,34 +139,613 @@
           <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
             {{"wesentanemailforyouraccount,pleaseverifytoregister." | translate }}
           </div>
-          <div class="h-14"></div>
-          <div class="w-full flex flex-col items-center justify-center">
-            <button (click)="onCheckVerification()" type="button" [ngClass]="{'bg-transparent border-primary-500 text-green-dark' : checkVerifyButtonString ==='Check Verification' ,
-                         ' bg-primary-500 text-white ' : checkVerifyButtonString === 'Verified'  ,
-                         ' bg-red-700 text-lime-50 border-red-700' : checkVerifyButtonString === 'Not Verified'
+           <div class="w-full flex flex-col items-center justify-center">
+            <!-- [formGroup]="demoAccountForm"  (ngSubmit)="onSubmitDemoAccount()"  -->
+            <form  
+            
+             class="w-full">
+              <div class="h-10"></div>
   
-                      }"
-              class="block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
-              {{checkVerifyButtonString | translate}}
-            </button>
+              <!-- name -->
+              <div class="w-full px-[3vw] flex md:flex-row flex-col">
+                  <div class="mb-4 md:w-6/12 w-full">
+                      <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                          {{"phonenumber" | translate}}
+                      </label>
+                      <input formControlName="firstName"
+                          class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="text">
+                      <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                      <!-- </div> -->
+                  </div>
   
-            <div class="h-5"></div>
+                  <div class="md:w-12 w-0 h-4 md:h-0"></div>
   
-            <button (click)="onLogout()" type="button"
-              class=" bg-primary-500 border-primary-500 text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
-              {{ "logout" | translate}}
-            </button>
-   
+                  <div class="mb-4 md:w-6/12 w-full">
+                      <label class="block text-gray-700 text-sm mb-2" for="lastName">
+                          {{"password" | translate}}
+                      </label>
+                      <input formControlName="lastName"
+                          class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                           type="text">
+                      <!-- <div *ngIf=" lastNameError != '' " class="text-sm text-red-600 mx-3 mt-1">{{lastNameError}}
+                      </div> -->
+                  </div>
+              </div>
+  
+              <div class="flex justify-center items-center">
+                <button (click)="onLogout()" type="submit"
+                class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+                {{ "login" | translate}}
+              </button>
+              </div>
+              
+          </form>
+
           </div>
   
   
         </div>
-  
-  
-  
   
       </div>
     </div>
   
   </div>
   
+
+  <div *ngIf=" this.loginService.signin==true">
+  
+    <div
+      class=" overflow-y-auto bg-opacity-40 py-5 h-screen  bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
+      id="modal">
+      <div class="w-full flex justify-end  mb-[1vh] ">
+  
+              <div (click)="signup()"
+                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-5 h-5">
+                  <img src="../../../assets/icons/clo.webp">
+              </div>
+          </div>
+      <div role="alert" class="scale-90 opacity-100 py-20 lg:w-6/12 md:w-8/12 w-full bg-white  mt-[4vh] rounded-lg mx-auto ">
+  
+        <div class=" w-full flex flex-col justify-center items-center">
+          <div class="lg:text-[2.1vw] md:text-[2.4vw]  text-[5vw] font-medium text-green-dark">
+            {{"partners" | translate}}
+          </div>
+          <div class="h-8"></div>
+          <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+            {{"wesentanemailforyouraccount,pleaseverifytoregister." | translate }}
+          </div>
+           <div class="w-full flex flex-col items-center justify-center">
+            <!-- [formGroup]="demoAccountForm"  (ngSubmit)="onSubmitDemoAccount()"  -->
+            <form  
+            
+             class="w-full">
+              <div class="h-10"></div>
+               
+              <!-- name -->
+              <div class="w-full px-[3vw] flex md:flex-row flex-col">
+
+
+                <div class="mb-4 md:w-6/12 w-full">
+                  <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                      {{"username" | translate}}
+                  </label>
+                  <input formControlName="firstName"
+                      class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        type="text">
+                  <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                  <!-- </div> -->
+                </div>
+
+              <div class="mb-4 md:w-6/12 w-full">
+                <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                    {{"email" | translate}}
+                </label>
+                <input formControlName="firstName"
+                    class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      type="text">
+                <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                <!-- </div> -->
+              </div>
+
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                      <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                          {{"phonenumber" | translate}}
+                      </label>
+                      <input formControlName="firstName"
+                          class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            type="text">
+                      <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                      <!-- </div> -->
+                  </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"location" | translate}}
+                    </label>
+                    <input formControlName="firstName"
+                        class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          type="text">
+                    <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                    <!-- </div> -->
+                  </div>
+
+
+                  <div class="mb-4">
+                    <label for="countries" class="block text-gray-700 text-sm mb-2">
+                        {{"countryofresidence" | translate }}
+                    </label>
+                    <div class="relative">
+                        <select id="countries" formControlName="country"
+                            class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                            <option class="font-roboto" *ngFor="let country of typeblood "
+                                [value]="country.value">
+                                {{country.value}}
+                            </option>
+                        </select>
+                        <div *ngIf="languageService.selectedLanguage == 'en'"
+                            class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                            <img class="w-3 cursor-pointer" src="../../../assets/icons/dropdown-open.svg">
+                        </div>
+                        <div *ngIf="!(languageService.selectedLanguage == 'en')"
+                            class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
+                            <img class="w-3 cursor-pointer" src="../../../assets/icons/dropdown-open.svg">
+                        </div>
+                    </div>
+                     
+    
+                  </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"gender" | translate}}
+                    </label>
+                   
+                    <div class="flex justify-start items-center">
+
+                      <button (click)="male()" class=" mx-[2vw] flex justify-between items-center">
+                          <div *ngIf="gender=='Male'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                          <div *ngIf="gender=='FeMale'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+
+                          <div class=" mx-[1vw] text-[4vw] text-black  ">Male</div>
+                      </button>
+                      <button (click)="female()" class=" flex justify-between items-center">
+                        <div *ngIf="gender=='FeMale'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                        <div *ngIf="gender=='Male'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+                      <div class="  mx-[1vw] text-[4vw] text-black  ">Female</div>
+                    </button>
+
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"Sugary" | translate}}
+                    </label>
+                   
+                    <div class="flex flex-col justify-start items-start">
+
+                      <button (click)="yesSuger()" class=" mx-[2vw] flex justify-between items-center">
+                          <div *ngIf="Suger=='Yes'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                          <div *ngIf="Suger=='No'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+
+                          <div class=" mx-[1vw] text-[4vw] text-black  ">Yes</div>
+                      </button>
+                      <button (click)="NoSuger()" class=" mx-[2vw] flex justify-between items-center">
+                        <div *ngIf="Suger=='No'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                        <div *ngIf="Suger=='Yes'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+                      <div class="  mx-[1vw] text-[4vw] text-black  ">No</div>
+                    </button>
+
+
+                    </div>
+                  </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"smok" | translate}}
+                    </label>
+                   
+                    <div class="flex flex-col justify-start items-start">
+
+                      <button (click)="yessmok()" class=" mx-[2vw] flex justify-between items-center">
+                          <div *ngIf="smok=='Yes'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                          <div *ngIf="smok=='No'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+
+                          <div class=" mx-[1vw] text-[4vw] text-black  ">Yes</div>
+                      </button>
+                      <button (click)="Nosmok()" class=" mx-[2vw] flex justify-between items-center">
+                        <div *ngIf="smok=='No'" class=" w-[5vw] h-3 rounded-[5vw] bg-red-700 "></div>
+                        <div *ngIf="smok=='Yes'" class=" w-[5vw] h-3 rounded-[5vw] bg-white border border-red-700 "></div>
+                      <div class="  mx-[1vw] text-[4vw] text-black  ">No</div>
+                    </button>
+
+
+                    </div>
+                  </div>
+
+  
+   
+                  <div class="w-full flex md:flex-row flex-col ">
+                    <div class="mb-6 md:w-6/12 w-full">
+                        <label class="block text-gray-700 text-sm mb-2" for="password">
+                            <span class="text-custom-red">*</span> {{"password" | translate}}
+                        </label>
+                        <div class="relative">
+                            <input formControlName="password"
+                                class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="password" [type]="showPassword ? 'text' : 'password'">
+                            <div *ngIf="languageService.selectedLanguage == 'en'" (click)="onShowPassword()"
+                                class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                                <img class="w-5 cursor-pointer"
+                                    src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
+                            </div>
+                            <div *ngIf="languageService.selectedLanguage != 'en'" (click)="onShowPassword()"
+                                class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
+                                <img class="w-5 cursor-pointer"
+                                    src="../../../assets/icons/{{showPassword ? 'hide' : 'show' }}.svg">
+                            </div>
+                        </div>
+                       
+                    </div>
+    
+     
+                    <div class="mb-6 md:w-6/12 w-ull">
+                        <label class="block text-gray-700 text-sm mb-2" for="confirem">
+                            <span class="text-custom-red">*</span> {{"confirempassword" | translate}}
+                        </label>
+                        <div class="relative">
+                            <input formControlName="confiremPassword"
+                                class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="confirem" [type]="showConfiremPassword ? 'text' : 'password'">
+                            <div *ngIf="languageService.selectedLanguage == 'en'" (click)="onShowConfiremPassword()"
+                                class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                                <img class="w-5 cursor-pointer"
+                                    src="../../../assets/icons/{{showConfiremPassword ? 'hide' : 'show'}}.svg">
+                            </div>
+                            <div *ngIf="languageService.selectedLanguage != 'en'" (click)="onShowConfiremPassword()"
+                                class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
+                                <img class="w-5 cursor-pointer"
+                                    src="../../../assets/icons/{{showConfiremPassword ? 'hide' : 'show'}}.svg">
+                            </div>
+    
+                        </div>
+                        
+                    </div>
+                  </div>
+              </div>
+  
+              <div class="flex justify-center items-center">
+                <button (click)="onLogout()" type="submit"
+                class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+                {{ "freedemo" | translate}}
+              </button>
+              </div>
+              
+          </form>
+
+          </div>
+  
+  
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+
+
+  <div *ngIf=" this.loginService.news==true">
+  
+    <div
+      class=" overflow-y-auto bg-opacity-40 py-5 h-screen  bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
+      id="modal">
+      <div class="w-full flex justify-end  mb-[1vh] ">
+  
+              <div (click)="news()"
+                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-5 h-5">
+                  <img src="../../../assets/icons/clo.webp">
+              </div>
+          </div>
+      <div role="alert" class="scale-90 opacity-100 py-20 lg:w-6/12 md:w-8/12 w-full bg-white  mt-[4vh] rounded-lg mx-auto ">
+  
+        <div class=" w-full flex flex-col justify-center items-center">
+          <div class="lg:text-[2.1vw] md:text-[2.4vw]  text-[5vw] font-medium text-green-dark">
+            {{"addnews" | translate}}
+          </div>
+          <div class="h-8"></div>
+
+          <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+            {{"wesentanemailforyouraccount,pleaseverifytoregister." | translate }}
+          </div>
+           <div class="w-full flex flex-col items-center justify-center">
+            <!-- [formGroup]="demoAccountForm"  (ngSubmit)="onSubmitDemoAccount()"  -->
+            <form  
+            
+             class="w-full">
+              <div class="h-10"></div>
+               
+              <!-- name -->
+              <div class="w-full px-[3vw] flex md:flex-row flex-col">
+
+                <div class="mb-4 md:w-6/12 w-full">
+                  <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                      {{"subject" | translate}}
+                  </label>
+                  <input formControlName="firstName"
+                      class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        type="text">
+                  <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                  <!-- </div> -->
+                </div>
+  
+                <div class="mb-4 md:w-6/12 w-full">
+                  <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                      {{"phonenumber" | translate}}
+                  </label>
+                  <input formControlName="firstName"
+                      class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        type="text">
+                  <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                  <!-- </div> -->
+                </div>
+                <div class="mb-4">
+                  <label for="countries" class="block text-gray-700 text-sm mb-2">
+                      {{"countryofresidence" | translate }}
+                  </label>
+                  <div class="relative">
+                      <select id="countries" formControlName="country"
+                          class="appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                          <option class="font-roboto" *ngFor="let country of typeblood "
+                              [value]="country.value">
+                              {{country.value}}
+                          </option>
+                      </select>
+                      <div *ngIf="languageService.selectedLanguage == 'en'"
+                          class="absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5">
+                          <img class="w-3 cursor-pointer" src="../../../assets/icons/dropdown-open.svg">
+                      </div>
+                      <div *ngIf="!(languageService.selectedLanguage == 'en')"
+                          class="absolute inset-y-0 left-0 pl-3 flex items-center text-sm leading-5">
+                          <img class="w-3 cursor-pointer" src="../../../assets/icons/dropdown-open.svg">
+                      </div>
+                  </div>
+                   
+  
+                </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"location" | translate}}
+                    </label>
+                    <input formControlName="firstName"
+                        class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          type="text">
+                    <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+                    <!-- </div> -->
+                  </div>
+
+                  <div class="mb-4 md:w-6/12 w-full">
+                    <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                        {{"note" | translate}}
+                    </label>
+                    <textarea formControlName="firstName"
+                        class=" appearance-none border rounded w-full h-[15vh] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          type="text">
+                    </textarea>
+                   
+                  </div>
+    
+              </div>
+  
+              <div class="flex justify-center items-center">
+                <button (click)="onLogout()" type="submit"
+                class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+                {{ "add" | translate}}
+              </button>
+              </div>
+              
+          </form>
+
+          </div>
+  
+  
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+
+
+  <div *ngIf=" this.loginService.folder==true">
+  
+    <div
+      class=" overflow-y-auto bg-opacity-40 py-5 h-screen  bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
+      id="modal">
+      <div class="w-full flex justify-end  mb-[1vh] ">
+  
+              <div (click)="fol()"
+                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-5 h-5">
+                  <img src="../../../assets/icons/clo.webp">
+              </div>
+          </div>
+      <div role="alert" class="scale-90 opacity-100 py-2 lg:w-6/12 md:w-8/12 w-full bg-white  mt-[3vh] rounded-lg mx-auto ">
+  
+        <div class=" w-full flex flex-col justify-center items-center">
+          <div class="lg:text-[2.1vw] md:text-[2.4vw]  text-[5vw] font-medium text-green-dark">
+            {{"newnotifi" | translate}}
+          </div>
+          <div class="h-8"></div>
+          <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+            {{"someone" | translate }}
+          </div>
+
+ <div *ngFor="let item of noti" class=" py-[1vw] px-[2vw]  my-[1vh] bg-gray-300 border border-gray-700 rounded-[3vw]">
+
+
+  <div class=" text-[3vw]  flex justify-between text-black font-bold text-center   ">
+   {{'countryofresidence'|translate}} :  <div class=" text-[3vw] text-red-700"> A+</div>
+   <div class="mx-[1vw] flex justify-end  mb-[1vh] ">
+  
+    <div (click)="notific()"
+        class="bg-white cursor-pointer    rounded-full flex justify-center items-center w-5 h-5">
+        <img src="../../../assets/icons/clo.webp">
+    </div>
+</div>
+  </div>
+  <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+     Note:    i have a some problem 
+  </div>
+  <div class="lg:text-[1.2vw] mb-[1vh] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+     goizha/suli/Iraq , 0770 3597983
+   </div>
+
+
+   <div   class="flex justify-center items-center">
+    <button (click)="ohelp()" type="submit"
+    class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+    {{ "thanks And Call " | translate}}
+  </button>
+  <!-- <div *ngIf="help==true"  class="flex justify-center items-center">
+    <button (click)="ohelp()" type="submit"
+    class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+    {{ "close" | translate}}
+  </button> -->
+  </div>
+    
+ </div>
+  
+  
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+
+
+  <div *ngIf=" this.loginService.notifi==true">
+  
+    <div
+      class=" overflow-y-auto bg-opacity-40 py-5 h-screen  bg-gray-700 transition duration-150 ease-in-out z-40 fixed top-0 right-0 bottom-0 left-0"
+      id="modal">
+      <div class="w-full flex justify-end  mb-[1vh] ">
+  
+              <div (click)="notific()"
+                  class="bg-white cursor-pointer fixed right-10  rounded-full flex justify-center items-center w-5 h-5">
+                  <img src="../../../assets/icons/clo.webp">
+              </div>
+          </div>
+      <div role="alert" class="scale-90 opacity-100 py-2 lg:w-6/12 md:w-8/12 w-full bg-white  mt-[3vh] rounded-lg mx-auto ">
+  
+        <div class=" w-full flex flex-col justify-center items-center">
+          <div class="lg:text-[2.1vw] md:text-[2.4vw]  text-[5vw] font-medium text-green-dark">
+            {{"newnotifi" | translate}}
+          </div>
+          <div class="h-8"></div>
+          <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+            {{"someone" | translate }}
+          </div>
+
+ <div *ngFor="let item of noti" class=" py-[1vw] px-[2vw]  my-[1vh] bg-gray-300 border border-gray-700 rounded-[3vw]">
+
+
+  <div class=" text-[3vw]  flex justify-between text-black font-bold text-center   ">
+    {{'countryofresidence'|translate}} :  <div class=" text-[3vw] text-red-700"> A+</div>
+    <div class="mx-[1vw] flex justify-end  mb-[1vh] ">
+   
+     <div (click)="notific()"
+         class="bg-white cursor-pointer    rounded-full flex justify-center items-center w-5 h-5">
+         <img src="../../../assets/icons/clo.webp">
+     </div>
+ </div>
+   </div>
+  <div class="lg:text-[1.2vw] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+     Note
+  </div>
+  <div class="lg:text-[1.2vw] mb-[1vh] md:text-[1.6vw] text-[4vw] text-green-dark text-center md:px-0 px-4">
+     location/location , 0770 3597983
+   </div>
+
+
+   <div   class="flex justify-center items-center">
+    <button (click)="ohelp()" type="submit"
+    class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+    {{ "helped" | translate}}
+  </button>
+  <!-- <div *ngIf="help==true"  class="flex justify-center items-center">
+    <button (click)="ohelp()" type="submit"
+    class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+    {{ "close" | translate}}
+  </button> -->
+  </div>
+   <div *ngIf="help==true" class="w-full   mb-[2vh] flex flex-col items-center justify-center">
+    <!-- [formGroup]="demoAccountForm"  (ngSubmit)="onSubmitDemoAccount()"  -->
+    <form  
+    
+     class="w-full">
+      <div class="h-10"></div>
+       
+      <!-- name -->
+      <div class="w-full px-[3vw] flex md:flex-row flex-col">
+
+
+        <div class="mb-4 md:w-6/12 w-full">
+          <label class="block text-gray-700 text-sm mb-2" for="fistname">
+              {{"phonenumber" | translate}}
+          </label>
+          <input formControlName="firstName"
+              class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                type="text">
+          <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+          <!-- </div> -->
+        </div>
+       
+
+          <div class="mb-4 md:w-6/12 w-full">
+            <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                {{"location" | translate}}
+            </label>
+            <input formControlName="firstName"
+                class=" appearance-none border rounded w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  type="text">
+            <!-- <div *ngIf="firstNameError != ''" class="text-sm text-red-600 mx-3 mt-1">{{firstNameError}} -->
+            <!-- </div> -->
+          </div>
+
+          <div class="mb-4 md:w-6/12 w-full">
+            <label class="block text-gray-700 text-sm mb-2" for="fistname">
+                {{"note" | translate}}
+            </label>
+            <textarea formControlName="firstName"
+                class=" appearance-none border rounded w-full h-[15vh] py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  type="text">
+            </textarea>
+           
+          </div>
+
+      </div>
+
+      <div class="flex justify-center items-center">
+        <button (click)="onLogout()" type="submit"
+        class=" bg-red-700 border-red-700   text-white block md:w-5/12 w-[70vw] py-3 border-2 font-medium lg:text-[1.4vw] text-[4vw] md:text-[1.7vw] rounded hover:shadow-lg   focus:outline-none focus:ring-0   transition duration-150 ease-in-out">
+        {{ "add" | translate}}
+      </button>
+      </div>
+      
+  </form>
+
+  </div>
+ </div>
+  
+  
+        </div>
+  
+      </div>
+    </div>
+  
+  </div>
+
